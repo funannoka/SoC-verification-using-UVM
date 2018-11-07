@@ -1,0 +1,68 @@
+Command: ./simv -l sim.log
+Chronologic VCS simulator copyright 1991-2014
+Contains Synopsys proprietary information.
+Compiler version I-2014.03-2; Runtime version I-2014.03-2;  Oct  1 03:17 2017
+UVM_INFO /home/morris/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test msg_test...
+UVM_INFO msg_test.sv(65) @ 0: uvm_test_top.env.sb_dest [write] Ifunanya Nnoka, Message #  1
+UVM_INFO msg_test.sv(65) @ 200: uvm_test_top.env.sb_dest [write] Ifunanya Nnoka, Message #  2
+UVM_INFO msg_test.sv(65) @ 400: uvm_test_top.env.sb_dest [write] Ifunanya Nnoka, Message #  3
+UVM_INFO msg_test.sv(65) @ 600: uvm_test_top.env.sb_dest [write] Ifunanya Nnoka, Message #  4
+UVM_INFO msg_test.sv(65) @ 800: uvm_test_top.env.sb_dest [write] Ifunanya Nnoka, Message #  5
+UVM_INFO msg_test.sv(65) @ 1000: uvm_test_top.env.sb_dest [write] Ifunanya Nnoka, Message #  6
+UVM_INFO msg_test.sv(65) @ 1200: uvm_test_top.env.sb_dest [write] Ifunanya Nnoka, Message #  7
+UVM_INFO msg_test.sv(65) @ 1400: uvm_test_top.env.sb_dest [write] Ifunanya Nnoka, Message #  8
+UVM_INFO msg_test.sv(65) @ 1600: uvm_test_top.env.sb_dest [write] Ifunanya Nnoka, Message #  9
+UVM_INFO msg_test.sv(65) @ 1800: uvm_test_top.env.sb_dest [write] Ifunanya Nnoka, Message # 10
+UVM_INFO msg_test.sv(65) @ 2000: uvm_test_top.env.sb_dest [write] Ifunanya Nnoka, Message # 11
+UVM_INFO msg_test.sv(65) @ 2200: uvm_test_top.env.sb_dest [write] Ifunanya Nnoka, Message # 12
+UVM_INFO msg_test.sv(65) @ 2400: uvm_test_top.env.sb_dest [write] Ifunanya Nnoka, Message # 13
+UVM_INFO msg_test.sv(65) @ 2600: uvm_test_top.env.sb_dest [write] Ifunanya Nnoka, Message # 14
+UVM_INFO msg_test.sv(65) @ 2800: uvm_test_top.env.sb_dest [write] Ifunanya Nnoka, Message # 15
+UVM_INFO msg_test.sv(65) @ 3000: uvm_test_top.env.sb_dest [write] Ifunanya Nnoka, Message # 16
+UVM_INFO msg_test.sv(65) @ 3200: uvm_test_top.env.sb_dest [write] Ifunanya Nnoka, Message # 17
+UVM_INFO msg_test.sv(65) @ 3400: uvm_test_top.env.sb_dest [write] Ifunanya Nnoka, Message # 18
+UVM_INFO msg_test.sv(65) @ 3600: uvm_test_top.env.sb_dest [write] Ifunanya Nnoka, Message # 19
+UVM_INFO msg_test.sv(65) @ 3800: uvm_test_top.env.sb_dest [write] Ifunanya Nnoka, Message # 20
+UVM_INFO /home/morris/uvm-1.2/src/base/uvm_objection.svh(1271) @ 4000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO /home/morris/uvm-1.2/src/base/uvm_report_server.svh(847) @ 4000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   23
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[TEST_DONE]     1
+[UVM/RELNOTES]     1
+[write]    20
+
+$finish called from file "/home/morris/uvm-1.2/src/base/uvm_root.svh", line 517.
+$finish at simulation time                 4000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 40000 ps
+CPU Time:      0.260 seconds;       Data structure size:   0.2Mb
+Sun Oct  1 03:17:45 2017

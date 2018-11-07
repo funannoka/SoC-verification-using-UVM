@@ -1,0 +1,5 @@
+#!/usr/bin/csh
+source /apps/design_environment.csh
+set test_name="$1"
+vcs -sverilog -ntb_opts uvm-1.1 -timescale=1ns/1ns +ntb_random_seed=value +incdir+../package  +incdir+../test +incdir+../top ../top/msgs_top.sv -l msgs_compile.log 
+./simv -l msgs_sim.log
