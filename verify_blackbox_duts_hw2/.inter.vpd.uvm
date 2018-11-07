@@ -1,0 +1,454 @@
+#0 in unnamed$$_6 at top.sv:30
+@ 0: [CFGDB/SET] Configuration '*.intf' (type virtual interface intf) set by  = (virtual interface intf) '{clk:'h0, rst:'h0, din:'hxxxxxxxx, pushin:'hx, complete:'hx, pushout:'hx, dout:'hxxxxxxxx}
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.recording_detail' (type logic signed[4095:0]) read by uvm_test_top = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.recording_detail' (type int) read by uvm_test_top = null (failed lookup)
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/STRT] Phase 'common' (id=187) Starting phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/DONE] Phase 'common' (id=187) Completed phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/SCHEDULED] Phase 'common.build' (id=190) Scheduled from phase common
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/STRT] Phase 'common.build' (id=190) Starting phase
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.recording_detail' (type int) read by uvm_test_top.e = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ain = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.recording_detail' (type int) read by uvm_test_top.e.ain = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ack = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.recording_detail' (type int) read by uvm_test_top.e.ack = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.inm.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ack.inm = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.inm.recording_detail' (type int) read by uvm_test_top.e.ack.inm = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.expm.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ack.expm = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.expm.recording_detail' (type int) read by uvm_test_top.e.ack.expm = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.resm.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ack.resm = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.resm.recording_detail' (type int) read by uvm_test_top.e.ack.resm = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.chk.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ack.chk = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.chk.recording_detail' (type int) read by uvm_test_top.e.ack.chk = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.chk.expmsg.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ack.chk.expmsg = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.chk.expmsg.recording_detail' (type int) read by uvm_test_top.e.ack.chk.expmsg = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.chk.expmsg.put_export.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ack.chk.expmsg.put_export = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.chk.expmsg.put_export.recording_detail' (type int) read by uvm_test_top.e.ack.chk.expmsg.put_export = null (failed lookup)
+#0 in \uvm_port_base#(uvm_pkg::uvm_tlm_if_base#(trand::exp,trand::exp))::new  at /home/morris/uvm-1.2/src/base/uvm_port_base.svh:244
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.chk.expmsg.put_export.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.e.ack.chk.expmsg.put_export = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.chk.expmsg.get_peek_export.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ack.chk.expmsg.get_peek_export = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.chk.expmsg.get_peek_export.recording_detail' (type int) read by uvm_test_top.e.ack.chk.expmsg.get_peek_export = null (failed lookup)
+#0 in \uvm_port_base#(uvm_pkg::uvm_tlm_if_base#(trand::exp,trand::exp))::new  at /home/morris/uvm-1.2/src/base/uvm_port_base.svh:244
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.chk.expmsg.get_peek_export.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.e.ack.chk.expmsg.get_peek_export = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.chk.expmsg.put_ap.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ack.chk.expmsg.put_ap = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.chk.expmsg.put_ap.recording_detail' (type int) read by uvm_test_top.e.ack.chk.expmsg.put_ap = null (failed lookup)
+#0 in \uvm_port_base#(uvm_pkg::uvm_tlm_if_base#(trand::exp,trand::exp))::new  at /home/morris/uvm-1.2/src/base/uvm_port_base.svh:244
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.chk.expmsg.put_ap.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.e.ack.chk.expmsg.put_ap = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.chk.expmsg.get_ap.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ack.chk.expmsg.get_ap = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.chk.expmsg.get_ap.recording_detail' (type int) read by uvm_test_top.e.ack.chk.expmsg.get_ap = null (failed lookup)
+#0 in \uvm_port_base#(uvm_pkg::uvm_tlm_if_base#(trand::exp,trand::exp))::new  at /home/morris/uvm-1.2/src/base/uvm_port_base.svh:244
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.chk.expmsg.get_ap.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.e.ack.chk.expmsg.get_ap = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.chk.expmsg.analysis_export.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ack.chk.expmsg.analysis_export = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.chk.expmsg.analysis_export.recording_detail' (type int) read by uvm_test_top.e.ack.chk.expmsg.analysis_export = null (failed lookup)
+#0 in \uvm_port_base#(uvm_pkg::uvm_tlm_if_base#(trand::exp,trand::exp))::new  at /home/morris/uvm-1.2/src/base/uvm_port_base.svh:244
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.chk.expmsg.analysis_export.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.e.ack.chk.expmsg.analysis_export = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.chk.resmsg.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ack.chk.resmsg = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.chk.resmsg.recording_detail' (type int) read by uvm_test_top.e.ack.chk.resmsg = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.chk.resmsg.put_export.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ack.chk.resmsg.put_export = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.chk.resmsg.put_export.recording_detail' (type int) read by uvm_test_top.e.ack.chk.resmsg.put_export = null (failed lookup)
+#0 in \uvm_port_base#(uvm_pkg::uvm_tlm_if_base#(trand::resq,trand::resq))::new  at /home/morris/uvm-1.2/src/base/uvm_port_base.svh:244
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.chk.resmsg.put_export.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.e.ack.chk.resmsg.put_export = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.chk.resmsg.get_peek_export.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ack.chk.resmsg.get_peek_export = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.chk.resmsg.get_peek_export.recording_detail' (type int) read by uvm_test_top.e.ack.chk.resmsg.get_peek_export = null (failed lookup)
+#0 in \uvm_port_base#(uvm_pkg::uvm_tlm_if_base#(trand::resq,trand::resq))::new  at /home/morris/uvm-1.2/src/base/uvm_port_base.svh:244
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.chk.resmsg.get_peek_export.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.e.ack.chk.resmsg.get_peek_export = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.chk.resmsg.put_ap.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ack.chk.resmsg.put_ap = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.chk.resmsg.put_ap.recording_detail' (type int) read by uvm_test_top.e.ack.chk.resmsg.put_ap = null (failed lookup)
+#0 in \uvm_port_base#(uvm_pkg::uvm_tlm_if_base#(trand::resq,trand::resq))::new  at /home/morris/uvm-1.2/src/base/uvm_port_base.svh:244
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.chk.resmsg.put_ap.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.e.ack.chk.resmsg.put_ap = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.chk.resmsg.get_ap.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ack.chk.resmsg.get_ap = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.chk.resmsg.get_ap.recording_detail' (type int) read by uvm_test_top.e.ack.chk.resmsg.get_ap = null (failed lookup)
+#0 in \uvm_port_base#(uvm_pkg::uvm_tlm_if_base#(trand::resq,trand::resq))::new  at /home/morris/uvm-1.2/src/base/uvm_port_base.svh:244
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.chk.resmsg.get_ap.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.e.ack.chk.resmsg.get_ap = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.chk.resmsg.analysis_export.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ack.chk.resmsg.analysis_export = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.chk.resmsg.analysis_export.recording_detail' (type int) read by uvm_test_top.e.ack.chk.resmsg.analysis_export = null (failed lookup)
+#0 in \uvm_port_base#(uvm_pkg::uvm_tlm_if_base#(trand::resq,trand::resq))::new  at /home/morris/uvm-1.2/src/base/uvm_port_base.svh:244
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.chk.resmsg.analysis_export.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.e.ack.chk.resmsg.analysis_export = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.expm.inpmsg.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ack.expm.inpmsg = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.expm.inpmsg.recording_detail' (type int) read by uvm_test_top.e.ack.expm.inpmsg = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.expm.inpmsg.put_export.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ack.expm.inpmsg.put_export = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.expm.inpmsg.put_export.recording_detail' (type int) read by uvm_test_top.e.ack.expm.inpmsg.put_export = null (failed lookup)
+#0 in \uvm_port_base#(uvm_pkg::uvm_tlm_if_base#(trand::idata,trand::idata))::new  at /home/morris/uvm-1.2/src/base/uvm_port_base.svh:244
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.expm.inpmsg.put_export.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.e.ack.expm.inpmsg.put_export = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.expm.inpmsg.get_peek_export.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ack.expm.inpmsg.get_peek_export = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.expm.inpmsg.get_peek_export.recording_detail' (type int) read by uvm_test_top.e.ack.expm.inpmsg.get_peek_export = null (failed lookup)
+#0 in \uvm_port_base#(uvm_pkg::uvm_tlm_if_base#(trand::idata,trand::idata))::new  at /home/morris/uvm-1.2/src/base/uvm_port_base.svh:244
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.expm.inpmsg.get_peek_export.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.e.ack.expm.inpmsg.get_peek_export = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.expm.inpmsg.put_ap.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ack.expm.inpmsg.put_ap = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.expm.inpmsg.put_ap.recording_detail' (type int) read by uvm_test_top.e.ack.expm.inpmsg.put_ap = null (failed lookup)
+#0 in \uvm_port_base#(uvm_pkg::uvm_tlm_if_base#(trand::idata,trand::idata))::new  at /home/morris/uvm-1.2/src/base/uvm_port_base.svh:244
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.expm.inpmsg.put_ap.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.e.ack.expm.inpmsg.put_ap = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.expm.inpmsg.get_ap.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ack.expm.inpmsg.get_ap = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.expm.inpmsg.get_ap.recording_detail' (type int) read by uvm_test_top.e.ack.expm.inpmsg.get_ap = null (failed lookup)
+#0 in \uvm_port_base#(uvm_pkg::uvm_tlm_if_base#(trand::idata,trand::idata))::new  at /home/morris/uvm-1.2/src/base/uvm_port_base.svh:244
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.expm.inpmsg.get_ap.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.e.ack.expm.inpmsg.get_ap = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.expm.inpmsg.analysis_export.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ack.expm.inpmsg.analysis_export = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.expm.inpmsg.analysis_export.recording_detail' (type int) read by uvm_test_top.e.ack.expm.inpmsg.analysis_export = null (failed lookup)
+#0 in \uvm_port_base#(uvm_pkg::uvm_tlm_if_base#(trand::idata,trand::idata))::new  at /home/morris/uvm-1.2/src/base/uvm_port_base.svh:244
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.expm.inpmsg.analysis_export.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.e.ack.expm.inpmsg.analysis_export = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.expm.expmsg.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ack.expm.expmsg = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.expm.expmsg.recording_detail' (type int) read by uvm_test_top.e.ack.expm.expmsg = null (failed lookup)
+#0 in \uvm_port_base#(uvm_pkg::uvm_tlm_if_base#(trand::exp,trand::exp))::new  at /home/morris/uvm-1.2/src/base/uvm_port_base.svh:244
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.expm.expmsg.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.e.ack.expm.expmsg = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.inm.inpmsg.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ack.inm.inpmsg = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.inm.inpmsg.recording_detail' (type int) read by uvm_test_top.e.ack.inm.inpmsg = null (failed lookup)
+#0 in \uvm_port_base#(uvm_pkg::uvm_tlm_if_base#(trand::idata,trand::idata))::new  at /home/morris/uvm-1.2/src/base/uvm_port_base.svh:244
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.inm.inpmsg.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.e.ack.inm.inpmsg = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.resm.resmsg.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ack.resm.resmsg = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.resm.resmsg.recording_detail' (type int) read by uvm_test_top.e.ack.resm.resmsg = null (failed lookup)
+#0 in \uvm_port_base#(uvm_pkg::uvm_tlm_if_base#(trand::resq,trand::resq))::new  at /home/morris/uvm-1.2/src/base/uvm_port_base.svh:244
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.resm.resmsg.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.e.ack.resm.resmsg = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ain.sqr = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.recording_detail' (type int) read by uvm_test_top.e.ain.sqr = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.rsp_export.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ain.sqr.rsp_export = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.rsp_export.recording_detail' (type int) read by uvm_test_top.e.ain.sqr.rsp_export = null (failed lookup)
+#0 in \uvm_port_base#(uvm_pkg::uvm_tlm_if_base#(trand::itm,trand::itm))::new  at /home/morris/uvm-1.2/src/base/uvm_port_base.svh:244
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.rsp_export.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.e.ain.sqr.rsp_export = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.sqr_rsp_analysis_fifo.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ain.sqr.sqr_rsp_analysis_fifo = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.sqr_rsp_analysis_fifo.recording_detail' (type int) read by uvm_test_top.e.ain.sqr.sqr_rsp_analysis_fifo = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.sqr_rsp_analysis_fifo.put_export.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ain.sqr.sqr_rsp_analysis_fifo.put_export = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.sqr_rsp_analysis_fifo.put_export.recording_detail' (type int) read by uvm_test_top.e.ain.sqr.sqr_rsp_analysis_fifo.put_export = null (failed lookup)
+#0 in \uvm_port_base#(uvm_pkg::uvm_tlm_if_base#(trand::itm,trand::itm))::new  at /home/morris/uvm-1.2/src/base/uvm_port_base.svh:244
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.sqr_rsp_analysis_fifo.put_export.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.e.ain.sqr.sqr_rsp_analysis_fifo.put_export = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.sqr_rsp_analysis_fifo.get_peek_export.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ain.sqr.sqr_rsp_analysis_fifo.get_peek_export = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.sqr_rsp_analysis_fifo.get_peek_export.recording_detail' (type int) read by uvm_test_top.e.ain.sqr.sqr_rsp_analysis_fifo.get_peek_export = null (failed lookup)
+#0 in \uvm_port_base#(uvm_pkg::uvm_tlm_if_base#(trand::itm,trand::itm))::new  at /home/morris/uvm-1.2/src/base/uvm_port_base.svh:244
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.sqr_rsp_analysis_fifo.get_peek_export.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.e.ain.sqr.sqr_rsp_analysis_fifo.get_peek_export = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.sqr_rsp_analysis_fifo.put_ap.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ain.sqr.sqr_rsp_analysis_fifo.put_ap = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.sqr_rsp_analysis_fifo.put_ap.recording_detail' (type int) read by uvm_test_top.e.ain.sqr.sqr_rsp_analysis_fifo.put_ap = null (failed lookup)
+#0 in \uvm_port_base#(uvm_pkg::uvm_tlm_if_base#(trand::itm,trand::itm))::new  at /home/morris/uvm-1.2/src/base/uvm_port_base.svh:244
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.sqr_rsp_analysis_fifo.put_ap.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.e.ain.sqr.sqr_rsp_analysis_fifo.put_ap = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.sqr_rsp_analysis_fifo.get_ap.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ain.sqr.sqr_rsp_analysis_fifo.get_ap = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.sqr_rsp_analysis_fifo.get_ap.recording_detail' (type int) read by uvm_test_top.e.ain.sqr.sqr_rsp_analysis_fifo.get_ap = null (failed lookup)
+#0 in \uvm_port_base#(uvm_pkg::uvm_tlm_if_base#(trand::itm,trand::itm))::new  at /home/morris/uvm-1.2/src/base/uvm_port_base.svh:244
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.sqr_rsp_analysis_fifo.get_ap.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.e.ain.sqr.sqr_rsp_analysis_fifo.get_ap = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.sqr_rsp_analysis_fifo.analysis_export.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ain.sqr.sqr_rsp_analysis_fifo.analysis_export = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.sqr_rsp_analysis_fifo.analysis_export.recording_detail' (type int) read by uvm_test_top.e.ain.sqr.sqr_rsp_analysis_fifo.analysis_export = null (failed lookup)
+#0 in \uvm_port_base#(uvm_pkg::uvm_tlm_if_base#(trand::itm,trand::itm))::new  at /home/morris/uvm-1.2/src/base/uvm_port_base.svh:244
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.sqr_rsp_analysis_fifo.analysis_export.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.e.ain.sqr.sqr_rsp_analysis_fifo.analysis_export = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.req_fifo.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ain.sqr.req_fifo = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.req_fifo.recording_detail' (type int) read by uvm_test_top.e.ain.sqr.req_fifo = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.req_fifo.put_export.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ain.sqr.req_fifo.put_export = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.req_fifo.put_export.recording_detail' (type int) read by uvm_test_top.e.ain.sqr.req_fifo.put_export = null (failed lookup)
+#0 in \uvm_port_base#(uvm_pkg::uvm_tlm_if_base#(trand::itm,trand::itm))::new  at /home/morris/uvm-1.2/src/base/uvm_port_base.svh:244
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.req_fifo.put_export.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.e.ain.sqr.req_fifo.put_export = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.req_fifo.get_peek_export.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ain.sqr.req_fifo.get_peek_export = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.req_fifo.get_peek_export.recording_detail' (type int) read by uvm_test_top.e.ain.sqr.req_fifo.get_peek_export = null (failed lookup)
+#0 in \uvm_port_base#(uvm_pkg::uvm_tlm_if_base#(trand::itm,trand::itm))::new  at /home/morris/uvm-1.2/src/base/uvm_port_base.svh:244
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.req_fifo.get_peek_export.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.e.ain.sqr.req_fifo.get_peek_export = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.req_fifo.put_ap.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ain.sqr.req_fifo.put_ap = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.req_fifo.put_ap.recording_detail' (type int) read by uvm_test_top.e.ain.sqr.req_fifo.put_ap = null (failed lookup)
+#0 in \uvm_port_base#(uvm_pkg::uvm_tlm_if_base#(trand::itm,trand::itm))::new  at /home/morris/uvm-1.2/src/base/uvm_port_base.svh:244
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.req_fifo.put_ap.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.e.ain.sqr.req_fifo.put_ap = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.req_fifo.get_ap.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ain.sqr.req_fifo.get_ap = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.req_fifo.get_ap.recording_detail' (type int) read by uvm_test_top.e.ain.sqr.req_fifo.get_ap = null (failed lookup)
+#0 in \uvm_port_base#(uvm_pkg::uvm_tlm_if_base#(trand::itm,trand::itm))::new  at /home/morris/uvm-1.2/src/base/uvm_port_base.svh:244
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.req_fifo.get_ap.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.e.ain.sqr.req_fifo.get_ap = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.seq_item_export.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ain.sqr.seq_item_export = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.seq_item_export.recording_detail' (type int) read by uvm_test_top.e.ain.sqr.seq_item_export = null (failed lookup)
+#0 in \uvm_port_base#(uvm_pkg::uvm_sqr_if_base#(trand::itm,trand::itm))::new  at /home/morris/uvm-1.2/src/base/uvm_port_base.svh:244
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.seq_item_export.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.e.ain.sqr.seq_item_export = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.d.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ain.d = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.d.recording_detail' (type int) read by uvm_test_top.e.ain.d = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.d.seq_item_port.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ain.d.seq_item_port = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.d.seq_item_port.recording_detail' (type int) read by uvm_test_top.e.ain.d.seq_item_port = null (failed lookup)
+#0 in \uvm_port_base#(uvm_pkg::uvm_sqr_if_base#(trand::itm,trand::itm))::new  at /home/morris/uvm-1.2/src/base/uvm_port_base.svh:244
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.d.seq_item_port.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.e.ain.d.seq_item_port = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1808
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.d.rsp_port.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.e.ain.d.rsp_port = null (failed lookup)
+#0 in \uvm_component::new  at /home/morris/uvm-1.2/src/base/uvm_component.svh:1809
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.d.rsp_port.recording_detail' (type int) read by uvm_test_top.e.ain.d.rsp_port = null (failed lookup)
+#0 in \uvm_port_base#(uvm_pkg::uvm_tlm_if_base#(trand::itm,trand::itm))::new  at /home/morris/uvm-1.2/src/base/uvm_port_base.svh:244
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.d.rsp_port.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.e.ain.d.rsp_port = null (failed lookup)
+#0 in \uvm_sequencer_base::build  at /home/morris/uvm-1.2/src/seq/uvm_sequencer_base.svh:520
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.default_sequence' (type string) read by uvm_test_top.e.ain.sqr = null (failed lookup)
+#0 in \uvm_sequencer_base::build  at /home/morris/uvm-1.2/src/seq/uvm_sequencer_base.svh:525
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.count' (type logic signed[4095:0]) read by uvm_test_top.e.ain.sqr = null (failed lookup)
+#0 in \uvm_sequencer_base::build  at /home/morris/uvm-1.2/src/seq/uvm_sequencer_base.svh:529
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.max_random_count' (type logic signed[4095:0]) read by uvm_test_top.e.ain.sqr = null (failed lookup)
+#0 in \uvm_sequencer_base::build  at /home/morris/uvm-1.2/src/seq/uvm_sequencer_base.svh:533
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.max_random_depth' (type logic signed[4095:0]) read by uvm_test_top.e.ain.sqr = null (failed lookup)
+#0 in \uvm_sequencer_base::build  at /home/morris/uvm-1.2/src/seq/uvm_sequencer_base.svh:538
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.sqr.pound_zero_count' (type logic signed[4095:0]) read by uvm_test_top.e.ain.sqr = null (failed lookup)
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/DONE] Phase 'common.build' (id=190) Completed phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/SCHEDULED] Phase 'common.connect' (id=193) Scheduled from phase common.build
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/STRT] Phase 'common.connect' (id=193) Starting phase
+#0 in \inmon::connect_phase  at trand.svhp:12
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.inm.*.intf' (type virtual interface intf) read by uvm_test_top.e.ack.inm = (virtual interface intf) '{clk:'h0, rst:'h0, din:'hxxxxxxxx, pushin:'hx, complete:'hx, pushout:'hx, dout:'hxxxxxxxx}
+#0 in \resmon::connect_phase  at trand.svhp:12
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ack.resm.*.intf' (type virtual interface intf) read by uvm_test_top.e.ack.resm = (virtual interface intf) '{clk:'h0, rst:'h0, din:'hxxxxxxxx, pushin:'hx, complete:'hx, pushout:'hx, dout:'hxxxxxxxx}
+#0 in \drv::connect_phase  at trand.svhp:12
+@ 0: [CFGDB/GET] Configuration 'uvm_test_top.e.ain.d.*.intf' (type virtual interface intf) read by uvm_test_top.e.ain.d = (virtual interface intf) '{clk:'h0, rst:'h0, din:'hxxxxxxxx, pushin:'hx, complete:'hx, pushout:'hx, dout:'hxxxxxxxx}
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/DONE] Phase 'common.connect' (id=193) Completed phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/SCHEDULED] Phase 'common.end_of_elaboration' (id=196) Scheduled from phase common.connect
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/STRT] Phase 'common.end_of_elaboration' (id=196) Starting phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/DONE] Phase 'common.end_of_elaboration' (id=196) Completed phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/SCHEDULED] Phase 'common.start_of_simulation' (id=199) Scheduled from phase common.end_of_elaboration
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/STRT] Phase 'common.start_of_simulation' (id=199) Starting phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/DONE] Phase 'common.start_of_simulation' (id=199) Completed phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/SCHEDULED] Phase 'common.run' (id=202) Scheduled from phase common.start_of_simulation
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/SCHEDULED] Phase 'uvm' (id=222) Scheduled from phase common.start_of_simulation
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/STRT] Phase 'common.run' (id=202) Starting phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/STRT] Phase 'uvm' (id=222) Starting phase
+#0 in \t0::run_phase  at trand.svhp:174
+@ 0: [OBJTN_TRC] null Object uvm_test_top raised 1 objection(s) (start sequence): count=1  total=1
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/DONE] Phase 'uvm' (id=222) Completed phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched' (id=224) Scheduled from phase uvm
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/STRT] Phase 'uvm.uvm_sched' (id=224) Starting phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/DONE] Phase 'uvm.uvm_sched' (id=224) Completed phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched.pre_reset' (id=227) Scheduled from phase uvm.uvm_sched
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/STRT] Phase 'uvm.uvm_sched.pre_reset' (id=227) Starting phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/SKIP] Phase 'uvm.uvm_sched.pre_reset' (id=227) No objections raised, skipping phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/DONE] Phase 'uvm.uvm_sched.pre_reset' (id=227) Completed phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched.reset' (id=236) Scheduled from phase uvm.uvm_sched.pre_reset
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/STRT] Phase 'uvm.uvm_sched.reset' (id=236) Starting phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/SKIP] Phase 'uvm.uvm_sched.reset' (id=236) No objections raised, skipping phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/DONE] Phase 'uvm.uvm_sched.reset' (id=236) Completed phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched.post_reset' (id=245) Scheduled from phase uvm.uvm_sched.reset
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/STRT] Phase 'uvm.uvm_sched.post_reset' (id=245) Starting phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/SKIP] Phase 'uvm.uvm_sched.post_reset' (id=245) No objections raised, skipping phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/DONE] Phase 'uvm.uvm_sched.post_reset' (id=245) Completed phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched.pre_configure' (id=254) Scheduled from phase uvm.uvm_sched.post_reset
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/STRT] Phase 'uvm.uvm_sched.pre_configure' (id=254) Starting phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/SKIP] Phase 'uvm.uvm_sched.pre_configure' (id=254) No objections raised, skipping phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/DONE] Phase 'uvm.uvm_sched.pre_configure' (id=254) Completed phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched.configure' (id=263) Scheduled from phase uvm.uvm_sched.pre_configure
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/STRT] Phase 'uvm.uvm_sched.configure' (id=263) Starting phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/SKIP] Phase 'uvm.uvm_sched.configure' (id=263) No objections raised, skipping phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/DONE] Phase 'uvm.uvm_sched.configure' (id=263) Completed phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched.post_configure' (id=272) Scheduled from phase uvm.uvm_sched.configure
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/STRT] Phase 'uvm.uvm_sched.post_configure' (id=272) Starting phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/SKIP] Phase 'uvm.uvm_sched.post_configure' (id=272) No objections raised, skipping phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/DONE] Phase 'uvm.uvm_sched.post_configure' (id=272) Completed phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched.pre_main' (id=281) Scheduled from phase uvm.uvm_sched.post_configure
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/STRT] Phase 'uvm.uvm_sched.pre_main' (id=281) Starting phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/SKIP] Phase 'uvm.uvm_sched.pre_main' (id=281) No objections raised, skipping phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/DONE] Phase 'uvm.uvm_sched.pre_main' (id=281) Completed phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched.main' (id=290) Scheduled from phase uvm.uvm_sched.pre_main
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/STRT] Phase 'uvm.uvm_sched.main' (id=290) Starting phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/SKIP] Phase 'uvm.uvm_sched.main' (id=290) No objections raised, skipping phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/DONE] Phase 'uvm.uvm_sched.main' (id=290) Completed phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched.post_main' (id=299) Scheduled from phase uvm.uvm_sched.main
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/STRT] Phase 'uvm.uvm_sched.post_main' (id=299) Starting phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/SKIP] Phase 'uvm.uvm_sched.post_main' (id=299) No objections raised, skipping phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/DONE] Phase 'uvm.uvm_sched.post_main' (id=299) Completed phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched.pre_shutdown' (id=308) Scheduled from phase uvm.uvm_sched.post_main
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/STRT] Phase 'uvm.uvm_sched.pre_shutdown' (id=308) Starting phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/SKIP] Phase 'uvm.uvm_sched.pre_shutdown' (id=308) No objections raised, skipping phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/DONE] Phase 'uvm.uvm_sched.pre_shutdown' (id=308) Completed phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched.shutdown' (id=317) Scheduled from phase uvm.uvm_sched.pre_shutdown
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/STRT] Phase 'uvm.uvm_sched.shutdown' (id=317) Starting phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/SKIP] Phase 'uvm.uvm_sched.shutdown' (id=317) No objections raised, skipping phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/DONE] Phase 'uvm.uvm_sched.shutdown' (id=317) Completed phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched.post_shutdown' (id=326) Scheduled from phase uvm.uvm_sched.shutdown
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/STRT] Phase 'uvm.uvm_sched.post_shutdown' (id=326) Starting phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 0: [PH/TRC/SKIP] Phase 'uvm.uvm_sched.post_shutdown' (id=326) No objections raised, skipping phase
+#0 in \t0::run_phase  at trand.svhp:174
+@ 1521: [OBJTN_TRC] null Object uvm_test_top dropped 1 objection(s) (end sequence): count=0  total=0
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:421
+@ 1521: [OBJTN_TRC] null Object uvm_test_top all_dropped 1 objection(s) (end sequence): count=0  total=0
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 1521: [PH/TRC/DONE] Phase 'common.run' (id=202) Completed phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 1521: [PH/TRC/DONE] Phase 'uvm.uvm_sched.post_shutdown' (id=326) Completed phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 1521: [PH/TRC/SCHEDULED] Phase 'common.extract' (id=211) Scheduled from phase common.run
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 1521: [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched_end' (id=225) Scheduled from phase uvm.uvm_sched.post_shutdown
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 1521: [PH/TRC/STRT] Phase 'uvm.uvm_sched_end' (id=225) Starting phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 1521: [PH/TRC/DONE] Phase 'uvm.uvm_sched_end' (id=225) Completed phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 1521: [PH/TRC/SCHEDULED] Phase 'uvm.uvm_end' (id=223) Scheduled from phase uvm.uvm_sched_end
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 1521: [PH/TRC/STRT] Phase 'uvm.uvm_end' (id=223) Starting phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 1521: [PH/TRC/DONE] Phase 'uvm.uvm_end' (id=223) Completed phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 1521: [PH/TRC/STRT] Phase 'common.extract' (id=211) Starting phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 1521: [PH/TRC/DONE] Phase 'common.extract' (id=211) Completed phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 1521: [PH/TRC/SCHEDULED] Phase 'common.check' (id=214) Scheduled from phase common.extract
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 1521: [PH/TRC/STRT] Phase 'common.check' (id=214) Starting phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 1521: [PH/TRC/DONE] Phase 'common.check' (id=214) Completed phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 1521: [PH/TRC/SCHEDULED] Phase 'common.report' (id=217) Scheduled from phase common.check
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 1521: [PH/TRC/STRT] Phase 'common.report' (id=217) Starting phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 1521: [PH/TRC/DONE] Phase 'common.report' (id=217) Completed phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 1521: [PH/TRC/SCHEDULED] Phase 'common.final' (id=220) Scheduled from phase common.report
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 1521: [PH/TRC/STRT] Phase 'common.final' (id=220) Starting phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 1521: [PH/TRC/DONE] Phase 'common.final' (id=220) Completed phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 1521: [PH/TRC/SCHEDULED] Phase 'common.common_end' (id=188) Scheduled from phase common.final
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 1521: [PH/TRC/STRT] Phase 'common.common_end' (id=188) Starting phase
+#0 in \uvm_root::run_test  at /home/morris/uvm-1.2/src/base/uvm_root.svh:503
+@ 1521: [PH/TRC/DONE] Phase 'common.common_end' (id=188) Completed phase

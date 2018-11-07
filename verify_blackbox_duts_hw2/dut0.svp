@@ -1,0 +1,50 @@
+//
+// A simple averaging dut
+//
+
+module dut(intf.dut q);
+
+reg signed [47:0] rsum,rsum_d;
+reg signed [31:0] nseen,nseen_d;
+reg pushout,pushout_d;
+reg signed [31:0] dout,dout_d;
+
+assign q.dout = dout;
+assign q.pushout = pushout;
+
+always @(*) begin
+  rsum_d = rsum;
+  nseen_d = nseen;
+  pushout_d =0;
+  dout_d = dout;
+  if(q.pushin) begin
+    rsum_d = rsum+q.din;
+    nseen_d = nseen+1;
+    if(q.complete) begin
+      dout_d = (rsum+q.din)/(nseen+1);
+      pushout_d=1;
+      rsum_d = 0;
+      nseen_d = 0;
+    end
+  end 
+
+
+end
+
+
+always @(posedge(q.clk) or posedge(q.rst)) begin
+  if (q.rst) begin
+    rsum <= 0;
+    nseen <= 0;
+    pushout <= 0;
+    dout <= 0;
+  end else begin
+    rsum <= #1 rsum_d;
+    nseen <= #1 nseen_d;
+    pushout <= #1 pushout_d;
+    dout <= #1 dout_d;
+  end
+
+end
+
+endmodule : dut
