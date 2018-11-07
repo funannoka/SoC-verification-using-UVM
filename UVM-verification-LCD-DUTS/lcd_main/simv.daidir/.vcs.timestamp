@@ -1,0 +1,553 @@
+286      
+0 uvm_pkg.sv
+0 /apps/synopsys/VCSMX/etc/systemverilog/uvm_pkg.sv
+0 uvm_macros.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/uvm_macros.svh
+0 macros/uvm_version_defines.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/macros/uvm_version_defines.svh
+0 macros/uvm_global_defines.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/macros/uvm_global_defines.svh
+0 macros/uvm_message_defines.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/macros/uvm_message_defines.svh
+0 macros/uvm_phase_defines.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/macros/uvm_phase_defines.svh
+0 macros/uvm_object_defines.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/macros/uvm_object_defines.svh
+0 macros/uvm_printer_defines.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/macros/uvm_printer_defines.svh
+0 macros/uvm_tlm_defines.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/macros/uvm_tlm_defines.svh
+0 tlm1/uvm_tlm_imps.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/tlm1/uvm_tlm_imps.svh
+0 macros/uvm_sequence_defines.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/macros/uvm_sequence_defines.svh
+0 macros/uvm_callback_defines.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/macros/uvm_callback_defines.svh
+0 macros/uvm_reg_defines.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/macros/uvm_reg_defines.svh
+0 macros/uvm_deprecated_defines.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/macros/uvm_deprecated_defines.svh
+0 dpi/uvm_dpi.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/dpi/uvm_dpi.svh
+0 dpi/uvm_hdl.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/dpi/uvm_hdl.svh
+0 dpi/uvm_svcmd_dpi.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/dpi/uvm_svcmd_dpi.svh
+0 dpi/uvm_regex.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/dpi/uvm_regex.svh
+0 base/uvm_base.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_base.svh
+0 base/uvm_coreservice.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_coreservice.svh
+0 base/uvm_version.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_version.svh
+0 base/uvm_object_globals.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_object_globals.svh
+0 base/uvm_misc.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_misc.svh
+0 base/uvm_object.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_object.svh
+0 base/uvm_pool.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_pool.svh
+0 base/uvm_queue.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_queue.svh
+0 base/uvm_factory.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_factory.svh
+0 base/uvm_registry.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_registry.svh
+0 base/uvm_spell_chkr.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_spell_chkr.svh
+0 base/uvm_resource.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_resource.svh
+0 base/uvm_resource_specializations.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_resource_specializations.svh
+0 base/uvm_resource_db.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_resource_db.svh
+0 base/uvm_config_db.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_config_db.svh
+0 base/uvm_printer.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_printer.svh
+0 base/uvm_comparer.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_comparer.svh
+0 base/uvm_packer.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_packer.svh
+0 base/uvm_links.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_links.svh
+0 base/uvm_tr_database.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_tr_database.svh
+0 base/uvm_tr_stream.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_tr_stream.svh
+0 base/uvm_recorder.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_recorder.svh
+0 base/uvm_event_callback.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_event_callback.svh
+0 base/uvm_event.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_event.svh
+0 base/uvm_barrier.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_barrier.svh
+0 base/uvm_callback.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_callback.svh
+0 base/uvm_report_message.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_report_message.svh
+0 base/uvm_report_catcher.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_report_catcher.svh
+0 base/uvm_report_server.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_report_server.svh
+0 base/uvm_report_handler.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_report_handler.svh
+0 base/uvm_report_object.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_report_object.svh
+0 base/uvm_transaction.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_transaction.svh
+0 base/uvm_phase.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_phase.svh
+0 base/uvm_domain.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_domain.svh
+0 base/uvm_bottomup_phase.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_bottomup_phase.svh
+0 base/uvm_topdown_phase.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_topdown_phase.svh
+0 base/uvm_task_phase.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_task_phase.svh
+0 base/uvm_common_phases.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_common_phases.svh
+0 base/uvm_runtime_phases.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_runtime_phases.svh
+0 base/uvm_component.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_component.svh
+0 base/uvm_root.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_root.svh
+0 base/uvm_objection.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_objection.svh
+0 base/uvm_heartbeat.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_heartbeat.svh
+0 base/uvm_globals.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_globals.svh
+0 base/uvm_cmdline_processor.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_cmdline_processor.svh
+0 base/uvm_traversal.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_traversal.svh
+0 dap/uvm_dap.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/dap/uvm_dap.svh
+0 dap/uvm_set_get_dap_base.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/dap/uvm_set_get_dap_base.svh
+0 dap/uvm_simple_lock_dap.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/dap/uvm_simple_lock_dap.svh
+0 dap/uvm_get_to_lock_dap.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/dap/uvm_get_to_lock_dap.svh
+0 dap/uvm_set_before_get_dap.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/dap/uvm_set_before_get_dap.svh
+0 tlm1/uvm_tlm.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/tlm1/uvm_tlm.svh
+0 tlm1/uvm_tlm_ifs.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/tlm1/uvm_tlm_ifs.svh
+0 tlm1/uvm_sqr_ifs.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/tlm1/uvm_sqr_ifs.svh
+0 base/uvm_port_base.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/base/uvm_port_base.svh
+0 tlm1/uvm_imps.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/tlm1/uvm_imps.svh
+0 tlm1/uvm_ports.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/tlm1/uvm_ports.svh
+0 tlm1/uvm_exports.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/tlm1/uvm_exports.svh
+0 tlm1/uvm_analysis_port.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/tlm1/uvm_analysis_port.svh
+0 tlm1/uvm_tlm_fifo_base.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/tlm1/uvm_tlm_fifo_base.svh
+0 tlm1/uvm_tlm_fifos.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/tlm1/uvm_tlm_fifos.svh
+0 tlm1/uvm_tlm_req_rsp.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/tlm1/uvm_tlm_req_rsp.svh
+0 tlm1/uvm_sqr_connections.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/tlm1/uvm_sqr_connections.svh
+0 comps/uvm_comps.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/comps/uvm_comps.svh
+0 comps/uvm_pair.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/comps/uvm_pair.svh
+0 comps/uvm_policies.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/comps/uvm_policies.svh
+0 comps/uvm_in_order_comparator.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/comps/uvm_in_order_comparator.svh
+0 comps/uvm_algorithmic_comparator.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/comps/uvm_algorithmic_comparator.svh
+0 comps/uvm_random_stimulus.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/comps/uvm_random_stimulus.svh
+0 comps/uvm_subscriber.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/comps/uvm_subscriber.svh
+0 comps/uvm_monitor.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/comps/uvm_monitor.svh
+0 comps/uvm_driver.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/comps/uvm_driver.svh
+0 comps/uvm_push_driver.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/comps/uvm_push_driver.svh
+0 comps/uvm_scoreboard.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/comps/uvm_scoreboard.svh
+0 comps/uvm_agent.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/comps/uvm_agent.svh
+0 comps/uvm_env.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/comps/uvm_env.svh
+0 comps/uvm_test.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/comps/uvm_test.svh
+0 seq/uvm_seq.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/seq/uvm_seq.svh
+0 seq/uvm_sequence_item.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/seq/uvm_sequence_item.svh
+0 seq/uvm_sequencer_base.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/seq/uvm_sequencer_base.svh
+0 seq/uvm_sequencer_analysis_fifo.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/seq/uvm_sequencer_analysis_fifo.svh
+0 seq/uvm_sequencer_param_base.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/seq/uvm_sequencer_param_base.svh
+0 seq/uvm_sequencer.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/seq/uvm_sequencer.svh
+0 seq/uvm_push_sequencer.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/seq/uvm_push_sequencer.svh
+0 seq/uvm_sequence_base.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/seq/uvm_sequence_base.svh
+0 seq/uvm_sequence.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/seq/uvm_sequence.svh
+0 seq/uvm_sequence_library.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/seq/uvm_sequence_library.svh
+0 seq/uvm_sequence_builtin.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/seq/uvm_sequence_builtin.svh
+0 tlm2/uvm_tlm2.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/tlm2/uvm_tlm2.svh
+0 tlm2/uvm_tlm2_defines.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/tlm2/uvm_tlm2_defines.svh
+0 tlm2/uvm_tlm2_time.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/tlm2/uvm_tlm2_time.svh
+0 tlm2/uvm_tlm2_generic_payload.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/tlm2/uvm_tlm2_generic_payload.svh
+0 tlm2/uvm_tlm2_ifs.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/tlm2/uvm_tlm2_ifs.svh
+0 tlm2/uvm_tlm2_imps.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/tlm2/uvm_tlm2_imps.svh
+0 tlm2/uvm_tlm2_ports.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/tlm2/uvm_tlm2_ports.svh
+0 tlm2/uvm_tlm2_exports.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/tlm2/uvm_tlm2_exports.svh
+0 tlm2/uvm_tlm2_sockets_base.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/tlm2/uvm_tlm2_sockets_base.svh
+0 tlm2/uvm_tlm2_sockets.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/tlm2/uvm_tlm2_sockets.svh
+0 reg/uvm_reg_model.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/reg/uvm_reg_model.svh
+0 reg/uvm_reg_item.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/reg/uvm_reg_item.svh
+0 reg/uvm_reg_adapter.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/reg/uvm_reg_adapter.svh
+0 reg/uvm_reg_predictor.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/reg/uvm_reg_predictor.svh
+0 reg/uvm_reg_sequence.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/reg/uvm_reg_sequence.svh
+0 reg/uvm_reg_cbs.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/reg/uvm_reg_cbs.svh
+0 reg/uvm_reg_backdoor.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/reg/uvm_reg_backdoor.svh
+0 reg/uvm_reg_field.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/reg/uvm_reg_field.svh
+0 reg/uvm_vreg_field.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/reg/uvm_vreg_field.svh
+0 reg/uvm_reg.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/reg/uvm_reg.svh
+0 reg/uvm_reg_indirect.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/reg/uvm_reg_indirect.svh
+0 reg/uvm_reg_fifo.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/reg/uvm_reg_fifo.svh
+0 reg/uvm_reg_file.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/reg/uvm_reg_file.svh
+0 reg/uvm_mem_mam.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/reg/uvm_mem_mam.svh
+0 reg/uvm_vreg.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/reg/uvm_vreg.svh
+0 reg/uvm_mem.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/reg/uvm_mem.svh
+0 reg/uvm_reg_map.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/reg/uvm_reg_map.svh
+0 reg/uvm_reg_block.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/reg/uvm_reg_block.svh
+0 reg/sequences/uvm_reg_hw_reset_seq.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/reg/sequences/uvm_reg_hw_reset_seq.svh
+0 reg/sequences/uvm_reg_bit_bash_seq.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/reg/sequences/uvm_reg_bit_bash_seq.svh
+0 reg/sequences/uvm_mem_walk_seq.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/reg/sequences/uvm_mem_walk_seq.svh
+0 reg/sequences/uvm_mem_access_seq.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/reg/sequences/uvm_mem_access_seq.svh
+0 reg/sequences/uvm_reg_access_seq.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/reg/sequences/uvm_reg_access_seq.svh
+0 reg/sequences/uvm_reg_mem_shared_access_seq.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/reg/sequences/uvm_reg_mem_shared_access_seq.svh
+0 reg/sequences/uvm_reg_mem_built_in_seq.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/reg/sequences/uvm_reg_mem_built_in_seq.svh
+0 reg/sequences/uvm_reg_mem_hdl_paths_seq.svh
+0 /apps/synopsys/VCSMX/etc/systemverilog/reg/sequences/uvm_reg_mem_hdl_paths_seq.svh
+0 uvm.sv
+0 /apps/synopsys/VCSMX/etc/systemverilog/uvm.sv
+25
++acc
++define+UVM_OBJECT_MUST_HAVE_CONSTRUCTOR
++incdir+/home/morris/uvm-1.2/src
++vpi
+-Mamsrun=
+-Masflags=--32
+-Mcc=gcc
+-Mcfl= -pipe -m32 -fPIC -DVCS -O -I/apps/synopsys/VCSMX/include
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=/home/morris/uvm-1.2/src/dpi/uvm_dpi.cc
+-Mldflags=-m32 -m32
+-Mobjects= /apps/synopsys/VCSMX/linux/lib/libvirsim.so /apps/synopsys/VCSMX/linux/lib/librterrorinf.so /apps/synopsys/VCSMX/linux/lib/libsnpsmalloc.so
+-Mout=simv
+-Msaverestoreobj=/apps/synopsys/VCSMX/linux/lib/vcs_save_restore_new.o
+-Msyslibs=/apps/synopsys/VCSMX/linux/lib/ctype-stubs_32.a -ldl
+-Mvcsaceobjs=
+-gen_obj
+-picarchive
+-sverilog
+-timescale=1ns/1ns
+/apps/synopsys/VCSMX/linux/bin/vcs1
+/home/morris/uvm-1.2/src/uvm.sv
+top.sv
+69
+sysc_uni_pwd=/home/011408865@SJSUAD.SJSU.EDU/Piyush/EE279/project
+cdk_dir=/apps/cadence/IC50/tools/dfII/local
+XDG_SESSION_ID=5874
+XDG_RUNTIME_DIR=/run/user/747601448
+XDG_DATA_DIRS=/home/011408865@SJSUAD.SJSU.EDU/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+VMR_MODE_FLAG=32
+VENDOR=unknown
+VCS_MX_HOME_INTERNAL=1
+VCS_HOME=/apps/synopsys/VCSMX
+VCS_DEPTH=0
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH=linux
+VCS_AMD_PURE32=1
+VCSMX_HOME=/apps/synopsys/VCSMX
+UVM_HOME=/home/morris/uvm-1.2
+USE_NCSU_CDK=
+UNAME=/bin/uname
+TOOL_HOME=/apps/synopsys/VCSMX/linux
+TK_LIBRARY=/apps/synopsys/VCSMX/etc/auxx/tcllib/tk8.4/library
+SYNOPSYS_SIM=/apps/synopsys/2000.12
+SYNOPSYS=/apps/synopsys
+STROOT=/apps/synopsys/TCAD
+STRELEASE=current
+STDB=/home/011408865@SJSUAD.SJSU.EDU/sentaurus
+SSH_TTY=/dev/pts/0
+SSH_CONNECTION=10.40.36.132 35868 130.65.179.131 22
+SSH_CLIENT=10.40.36.132 35868 22
+SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+SNPSLMS_LICENSE_FILE=27000@cadence3.engr.sjsu.edu:/apps/synopsys/license/current-license-key
+SKIP_CDS_DIALOG=
+SFLM_SERVER=cadence3
+SELINUX_USE_CURRENT_RANGE=
+SELINUX_ROLE_REQUESTED=
+SELINUX_LEVEL_REQUESTED=
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+REMOTEHOST=10.40.36.132
+QTLIB=/usr/lib64/qt-3.3/lib
+QTINC=/usr/lib64/qt-3.3/include
+QTDIR=/usr/lib64/qt-3.3
+PRIMETIME_ROOT=/apps/synopsys/pt2000.11
+OVA_UUM=0
+OSTYPE=linux
+MODULESHOME=/usr/share/Modules
+MODULEPATH=/etc/scl/modulefiles:/usr/share/Modules/modulefiles:/etc/modulefiles:/usr/share/modulefiles
+LOADEDMODULES=
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LC_ALL=C
+KRB5CCNAME=KEYRING:persistent:747601448
+KDEDIRS=/usr
+IUS=/apps/cadence/INCISIV141
+ISEROOT=/apps/synopsys/TCAD/
+IC=/apps/cadence/IC50
+HSP_HOME=/apps/synopsys/HSPICE/hspice
+HOSTTYPE=x86_64-linux
+HISTCONTROL=ignoredups
+GROUP=domain users
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/747601448/bus
+CLS_CSD_COMPATIBILITY_LOCKING=NO
+CLS_CDSD_COMPATIBILITY_LOCKING=NO
+CDS_VHDL=/apps/cadence/INCISIV141/tools/leapfrog
+CDS_SITE=/apps/cadence/IC50/tools/dfII/local
+CDS_Netlisting_Mode=Analog
+CDS_LIC_FILE=5280@cadence3.engr.sjsu.edu:/export/apps/cadence/license-current
+CDSLMD_LICENSE_FILE=5280@cadence3.engr.sjsu.edu:/export/apps/cadence/license-current
+CDS=/apps/cadence
+BASH_FUNC_scl%%=() {  local CMD=$1;_ if [ "$CMD" = "load" -o "$CMD" = "unload" ]; then_ eval "module $@";_ else_ /usr/bin/scl "$@";_ fi_}
+BASH_FUNC_module%%=() {  eval `/usr/bin/modulecmd bash $*`_}
+ARCH=linux
+0
+161
+1510986141 mem32x32.sv
+1510986141 mem256x32.sv
+1510986141 mem128x32.sv
+1510986140 gsxor.sv
+1510986141 pixelpipe.sv
+1510986141 lcd_fifo.sv
+1510986141 lcd_master.sv
+1510986141 lcd.sv
+1512843229 scoreboard.sv
+1512842695 monitor.sv
+1512464170 output_drv.sv
+1512461028 drv.sv
+1512113825 seqr.sv
+1512847585 seq.sv
+1512520546 seq_item.sv
+1512543454 test.sv
+1510986141 lcdif.sv
+1402647219 /home/morris/uvm-1.2/src/reg/sequences/uvm_reg_mem_hdl_paths_seq.svh
+1402647219 /home/morris/uvm-1.2/src/reg/sequences/uvm_reg_mem_built_in_seq.svh
+1402647219 /home/morris/uvm-1.2/src/reg/sequences/uvm_reg_mem_shared_access_seq.svh
+1402647219 /home/morris/uvm-1.2/src/reg/sequences/uvm_reg_access_seq.svh
+1402647219 /home/morris/uvm-1.2/src/reg/sequences/uvm_mem_access_seq.svh
+1402647219 /home/morris/uvm-1.2/src/reg/sequences/uvm_mem_walk_seq.svh
+1402647219 /home/morris/uvm-1.2/src/reg/sequences/uvm_reg_bit_bash_seq.svh
+1402647219 /home/morris/uvm-1.2/src/reg/sequences/uvm_reg_hw_reset_seq.svh
+1402647219 /home/morris/uvm-1.2/src/reg/uvm_reg_block.svh
+1402647219 /home/morris/uvm-1.2/src/reg/uvm_reg_map.svh
+1402647219 /home/morris/uvm-1.2/src/reg/uvm_mem.svh
+1402647219 /home/morris/uvm-1.2/src/reg/uvm_vreg.svh
+1402647219 /home/morris/uvm-1.2/src/reg/uvm_mem_mam.svh
+1402647219 /home/morris/uvm-1.2/src/reg/uvm_reg_file.svh
+1402647219 /home/morris/uvm-1.2/src/reg/uvm_reg_fifo.svh
+1402647219 /home/morris/uvm-1.2/src/reg/uvm_reg_indirect.svh
+1402647219 /home/morris/uvm-1.2/src/reg/uvm_reg.svh
+1402647219 /home/morris/uvm-1.2/src/reg/uvm_vreg_field.svh
+1402647219 /home/morris/uvm-1.2/src/reg/uvm_reg_field.svh
+1402647219 /home/morris/uvm-1.2/src/reg/uvm_reg_backdoor.svh
+1402647219 /home/morris/uvm-1.2/src/reg/uvm_reg_cbs.svh
+1402647219 /home/morris/uvm-1.2/src/reg/uvm_reg_sequence.svh
+1402647219 /home/morris/uvm-1.2/src/reg/uvm_reg_predictor.svh
+1402647219 /home/morris/uvm-1.2/src/reg/uvm_reg_adapter.svh
+1402647219 /home/morris/uvm-1.2/src/reg/uvm_reg_item.svh
+1402647219 /home/morris/uvm-1.2/src/reg/uvm_reg_model.svh
+1402647219 /home/morris/uvm-1.2/src/tlm2/uvm_tlm2_sockets.svh
+1402647219 /home/morris/uvm-1.2/src/tlm2/uvm_tlm2_sockets_base.svh
+1402647219 /home/morris/uvm-1.2/src/tlm2/uvm_tlm2_exports.svh
+1402647219 /home/morris/uvm-1.2/src/tlm2/uvm_tlm2_ports.svh
+1402647219 /home/morris/uvm-1.2/src/tlm2/uvm_tlm2_imps.svh
+1402647219 /home/morris/uvm-1.2/src/tlm2/uvm_tlm2_ifs.svh
+1402647219 /home/morris/uvm-1.2/src/tlm2/uvm_tlm2_generic_payload.svh
+1402647219 /home/morris/uvm-1.2/src/tlm2/uvm_tlm2_time.svh
+1402647219 /home/morris/uvm-1.2/src/tlm2/uvm_tlm2_defines.svh
+1402647219 /home/morris/uvm-1.2/src/tlm2/uvm_tlm2.svh
+1402647219 /home/morris/uvm-1.2/src/seq/uvm_sequence_builtin.svh
+1402647219 /home/morris/uvm-1.2/src/seq/uvm_sequence_library.svh
+1402647219 /home/morris/uvm-1.2/src/seq/uvm_sequence.svh
+1402647219 /home/morris/uvm-1.2/src/seq/uvm_sequence_base.svh
+1402647219 /home/morris/uvm-1.2/src/seq/uvm_push_sequencer.svh
+1402647219 /home/morris/uvm-1.2/src/seq/uvm_sequencer.svh
+1402647219 /home/morris/uvm-1.2/src/seq/uvm_sequencer_param_base.svh
+1402647219 /home/morris/uvm-1.2/src/seq/uvm_sequencer_analysis_fifo.svh
+1402647219 /home/morris/uvm-1.2/src/seq/uvm_sequencer_base.svh
+1402647219 /home/morris/uvm-1.2/src/seq/uvm_sequence_item.svh
+1402647219 /home/morris/uvm-1.2/src/seq/uvm_seq.svh
+1402647219 /home/morris/uvm-1.2/src/comps/uvm_test.svh
+1402647219 /home/morris/uvm-1.2/src/comps/uvm_env.svh
+1402647219 /home/morris/uvm-1.2/src/comps/uvm_agent.svh
+1402647219 /home/morris/uvm-1.2/src/comps/uvm_scoreboard.svh
+1402647219 /home/morris/uvm-1.2/src/comps/uvm_push_driver.svh
+1402647219 /home/morris/uvm-1.2/src/comps/uvm_driver.svh
+1402647219 /home/morris/uvm-1.2/src/comps/uvm_monitor.svh
+1402647219 /home/morris/uvm-1.2/src/comps/uvm_subscriber.svh
+1402647219 /home/morris/uvm-1.2/src/comps/uvm_random_stimulus.svh
+1402647219 /home/morris/uvm-1.2/src/comps/uvm_algorithmic_comparator.svh
+1402647219 /home/morris/uvm-1.2/src/comps/uvm_in_order_comparator.svh
+1402647219 /home/morris/uvm-1.2/src/comps/uvm_policies.svh
+1402647219 /home/morris/uvm-1.2/src/comps/uvm_pair.svh
+1402647219 /home/morris/uvm-1.2/src/comps/uvm_comps.svh
+1402647219 /home/morris/uvm-1.2/src/tlm1/uvm_sqr_connections.svh
+1402647219 /home/morris/uvm-1.2/src/tlm1/uvm_tlm_req_rsp.svh
+1402647219 /home/morris/uvm-1.2/src/tlm1/uvm_tlm_fifos.svh
+1402647219 /home/morris/uvm-1.2/src/tlm1/uvm_tlm_fifo_base.svh
+1402647219 /home/morris/uvm-1.2/src/tlm1/uvm_analysis_port.svh
+1402647219 /home/morris/uvm-1.2/src/tlm1/uvm_exports.svh
+1402647219 /home/morris/uvm-1.2/src/tlm1/uvm_ports.svh
+1402647219 /home/morris/uvm-1.2/src/tlm1/uvm_imps.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_port_base.svh
+1402647219 /home/morris/uvm-1.2/src/tlm1/uvm_sqr_ifs.svh
+1402647219 /home/morris/uvm-1.2/src/tlm1/uvm_tlm_ifs.svh
+1402647219 /home/morris/uvm-1.2/src/tlm1/uvm_tlm.svh
+1402647219 /home/morris/uvm-1.2/src/dap/uvm_set_before_get_dap.svh
+1402647219 /home/morris/uvm-1.2/src/dap/uvm_get_to_lock_dap.svh
+1402647219 /home/morris/uvm-1.2/src/dap/uvm_simple_lock_dap.svh
+1402647219 /home/morris/uvm-1.2/src/dap/uvm_set_get_dap_base.svh
+1402647219 /home/morris/uvm-1.2/src/dap/uvm_dap.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_traversal.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_cmdline_processor.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_globals.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_heartbeat.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_objection.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_root.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_component.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_runtime_phases.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_common_phases.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_task_phase.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_topdown_phase.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_bottomup_phase.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_domain.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_phase.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_transaction.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_report_object.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_report_handler.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_report_server.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_report_catcher.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_report_message.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_callback.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_barrier.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_event.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_event_callback.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_recorder.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_tr_stream.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_tr_database.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_links.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_packer.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_comparer.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_printer.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_config_db.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_resource_db.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_resource_specializations.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_resource.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_spell_chkr.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_registry.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_factory.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_queue.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_pool.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_object.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_misc.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_object_globals.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_version.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_coreservice.svh
+1402647219 /home/morris/uvm-1.2/src/base/uvm_base.svh
+1402647219 /home/morris/uvm-1.2/src/dpi/uvm_regex.svh
+1402647219 /home/morris/uvm-1.2/src/dpi/uvm_svcmd_dpi.svh
+1402647219 /home/morris/uvm-1.2/src/dpi/uvm_hdl.svh
+1402647219 /home/morris/uvm-1.2/src/dpi/uvm_dpi.svh
+1402647219 /home/morris/uvm-1.2/src/macros/uvm_deprecated_defines.svh
+1402647219 /home/morris/uvm-1.2/src/macros/uvm_reg_defines.svh
+1402647219 /home/morris/uvm-1.2/src/macros/uvm_callback_defines.svh
+1402647219 /home/morris/uvm-1.2/src/macros/uvm_sequence_defines.svh
+1402647219 /home/morris/uvm-1.2/src/tlm1/uvm_tlm_imps.svh
+1402647219 /home/morris/uvm-1.2/src/macros/uvm_tlm_defines.svh
+1402647219 /home/morris/uvm-1.2/src/macros/uvm_printer_defines.svh
+1402647219 /home/morris/uvm-1.2/src/macros/uvm_object_defines.svh
+1402647219 /home/morris/uvm-1.2/src/macros/uvm_phase_defines.svh
+1402647219 /home/morris/uvm-1.2/src/macros/uvm_message_defines.svh
+1402647219 /home/morris/uvm-1.2/src/macros/uvm_global_defines.svh
+1402647219 /home/morris/uvm-1.2/src/macros/uvm_version_defines.svh
+1402647219 /home/morris/uvm-1.2/src/uvm_macros.svh
+1402647219 /home/morris/uvm-1.2/src/uvm_pkg.sv
+1512847611 top.sv
+1402647219 /home/morris/uvm-1.2/src/uvm.sv
+5
+1402647219 /home/morris/uvm-1.2/src/dpi/uvm_dpi.cc
+0 
+1410372690 /apps/synopsys/VCSMX/linux/lib/libvirsim.so
+1410372633 /apps/synopsys/VCSMX/linux/lib/librterrorinf.so
+1410372654 /apps/synopsys/VCSMX/linux/lib/libsnpsmalloc.so
+1512849771 simv.daidir

@@ -1,0 +1,72 @@
+
+Note-[RT_BS] Larger stack needed
+  Note: Bumping stack limit from 8192 to 8250 Kbytes.
+
+Chronologic VCS simulator copyright 1991-2014
+Contains Synopsys proprietary information.
+Compiler version I-2014.03-2; Runtime version I-2014.03-2;  Dec  9 12:57 2017
+UVM_INFO /home/morris/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test my_test...
+UVM_INFO drv.sv(44) @ 0: uvm_test_top.test_driver [Driver] Driver Build Phase started
+UVM_INFO monitor.sv(50) @ 0: uvm_test_top.test_mon [Monior] Build Phase
+UVM_INFO output_drv.sv(34) @ 0: uvm_test_top.test_output_drv [Ouput Driver] Driver Build Phase started
+UVM_INFO monitor.sv(56) @ 0: uvm_test_top.test_mon [Monitor] Connect_phase
+UVM_INFO output_drv.sv(38) @ 0: uvm_test_top.test_output_drv [Output Driver] Driver Connect Phase started
+UVM_INFO scoreboard.sv(72) @ 0: uvm_test_top.test_sb [Connect] Scoreboard Connect Phase
+UVM_INFO seq.sv(43) @ 0: uvm_test_top.test_seqr@@test_seq [Sequence] Running Test:	t9.txt	
+UVM_INFO drv.sv(100) @ 0: uvm_test_top.test_driver [sent] exp_n
+UVM_INFO drv.sv(110) @ 0: uvm_test_top.test_driver [sent] a_vl
+UVM_INFO drv.sv(112) @ 0: uvm_test_top.test_driver [sent] fl
+UVM_INFO scoreboard.sv(121) @ 53922000: uvm_test_top.test_sb [Run_phase] itm matched:	expected:     50666	received:     50666
+UVM_INFO scoreboard.sv(121) @ 155254000: uvm_test_top.test_sb [Run_phase] itm matched:	expected:     50666	received:     50666
+UVM_INFO scoreboard.sv(121) @ 256586000: uvm_test_top.test_sb [Run_phase] itm matched:	expected:     50666	received:     50666
+UVM_INFO /home/morris/uvm-1.2/src/base/uvm_objection.svh(1271) @ 1000000000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO /home/morris/uvm-1.2/src/base/uvm_report_server.svh(847) @ 1000000000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   16
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[Connect]     1
+[Driver]     1
+[Monior]     1
+[Monitor]     1
+[Ouput Driver]     1
+[Output Driver]     1
+[RNTST]     1
+[Run_phase]     3
+[Sequence]     1
+[TEST_DONE]     1
+[UVM/RELNOTES]     1
+[sent]     3
+
+$finish called from file "/home/morris/uvm-1.2/src/base/uvm_root.svh", line 517.
+$finish at simulation time           1000000000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 10000000000 ps
+CPU Time:      9.910 seconds;       Data structure size:   0.2Mb
+Sat Dec  9 12:57:44 2017

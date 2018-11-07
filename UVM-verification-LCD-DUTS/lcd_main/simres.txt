@@ -1,0 +1,406 @@
+
+Note-[RT_BS] Larger stack needed
+  Note: Bumping stack limit from 8192 to 8250 Kbytes.
+
+Chronologic VCS simulator copyright 1991-2014
+Contains Synopsys proprietary information.
+Compiler version I-2014.03-2; Runtime version I-2014.03-2;  Mar  8 13:25 2016
+UVM_INFO /home/morris/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test l0_test...
+UVM_INFO lcduvm.svp(5) @ 0: uvm_test_top.env [version] 0.002
+UVM_INFO lcduvm.svp(5) @ 5100: seqr@@file [test_file] t0.txt
+UVM_INFO /home/morris/uvm-1.2/src/base/uvm_report_server.svh(847) @ 46707100: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :    4
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[UVM/RELNOTES]     1
+[test_file]     1
+[version]     1
+
+$finish called from file "/home/morris/uvm-1.2/src/base/uvm_root.svh", line 517.
+$finish at simulation time             46707100
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 467071000 ps
+CPU Time:      2.940 seconds;       Data structure size:   0.2Mb
+Tue Mar  8 13:25:33 2016
+
+Note-[RT_BS] Larger stack needed
+  Note: Bumping stack limit from 8192 to 8250 Kbytes.
+
+Chronologic VCS simulator copyright 1991-2014
+Contains Synopsys proprietary information.
+Compiler version I-2014.03-2; Runtime version I-2014.03-2;  Mar  8 13:25 2016
+UVM_INFO /home/morris/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test l0_test...
+UVM_INFO lcduvm.svp(5) @ 0: uvm_test_top.env [version] 0.002
+UVM_INFO lcduvm.svp(5) @ 5100: seqr@@file [test_file] t1.txt
+UVM_INFO /home/morris/uvm-1.2/src/base/uvm_report_server.svh(847) @ 58269100: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :    4
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[UVM/RELNOTES]     1
+[test_file]     1
+[version]     1
+
+$finish called from file "/home/morris/uvm-1.2/src/base/uvm_root.svh", line 517.
+$finish at simulation time             58269100
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 582691000 ps
+CPU Time:      3.350 seconds;       Data structure size:   0.2Mb
+Tue Mar  8 13:25:37 2016
+
+Note-[RT_BS] Larger stack needed
+  Note: Bumping stack limit from 8192 to 8250 Kbytes.
+
+Chronologic VCS simulator copyright 1991-2014
+Contains Synopsys proprietary information.
+Compiler version I-2014.03-2; Runtime version I-2014.03-2;  Mar  8 13:25 2016
+UVM_INFO /home/morris/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test l0_test...
+UVM_INFO lcduvm.svp(5) @ 0: uvm_test_top.env [version] 0.002
+UVM_INFO lcduvm.svp(5) @ 5100: seqr@@file [test_file] t2.txt
+UVM_INFO /home/morris/uvm-1.2/src/base/uvm_report_server.svh(847) @ 81393100: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :    4
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[UVM/RELNOTES]     1
+[test_file]     1
+[version]     1
+
+$finish called from file "/home/morris/uvm-1.2/src/base/uvm_root.svh", line 517.
+$finish at simulation time             81393100
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 813931000 ps
+CPU Time:      4.370 seconds;       Data structure size:   0.2Mb
+Tue Mar  8 13:25:42 2016
+
+Note-[RT_BS] Larger stack needed
+  Note: Bumping stack limit from 8192 to 8250 Kbytes.
+
+Chronologic VCS simulator copyright 1991-2014
+Contains Synopsys proprietary information.
+Compiler version I-2014.03-2; Runtime version I-2014.03-2;  Mar  8 13:25 2016
+UVM_INFO /home/morris/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test l0_test...
+UVM_INFO lcduvm.svp(5) @ 0: uvm_test_top.env [version] 0.002
+UVM_INFO lcduvm.svp(5) @ 5100: seqr@@file [test_file] t3.txt
+UVM_INFO /home/morris/uvm-1.2/src/base/uvm_report_server.svh(847) @ 74907100: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :    4
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[UVM/RELNOTES]     1
+[test_file]     1
+[version]     1
+
+$finish called from file "/home/morris/uvm-1.2/src/base/uvm_root.svh", line 517.
+$finish at simulation time             74907100
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 749071000 ps
+CPU Time:      4.010 seconds;       Data structure size:   0.2Mb
+Tue Mar  8 13:25:46 2016
+
+Note-[RT_BS] Larger stack needed
+  Note: Bumping stack limit from 8192 to 8250 Kbytes.
+
+Chronologic VCS simulator copyright 1991-2014
+Contains Synopsys proprietary information.
+Compiler version I-2014.03-2; Runtime version I-2014.03-2;  Mar  8 13:25 2016
+UVM_INFO /home/morris/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test l0_test...
+UVM_INFO lcduvm.svp(5) @ 0: uvm_test_top.env [version] 0.002
+UVM_INFO lcduvm.svp(5) @ 5100: seqr@@file [test_file] t4.txt
+UVM_INFO /home/morris/uvm-1.2/src/base/uvm_report_server.svh(847) @ 116079100: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :    4
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[UVM/RELNOTES]     1
+[test_file]     1
+[version]     1
+
+$finish called from file "/home/morris/uvm-1.2/src/base/uvm_root.svh", line 517.
+$finish at simulation time            116079100
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 1160791000 ps
+CPU Time:      5.670 seconds;       Data structure size:   0.2Mb
+Tue Mar  8 13:25:52 2016
+
+Note-[RT_BS] Larger stack needed
+  Note: Bumping stack limit from 8192 to 8250 Kbytes.
+
+Chronologic VCS simulator copyright 1991-2014
+Contains Synopsys proprietary information.
+Compiler version I-2014.03-2; Runtime version I-2014.03-2;  Mar  8 13:25 2016
+UVM_INFO /home/morris/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test l0_test...
+UVM_INFO lcduvm.svp(5) @ 0: uvm_test_top.env [version] 0.002
+UVM_INFO lcduvm.svp(5) @ 5100: seqr@@file [test_file] t5.txt
+UVM_INFO /home/morris/uvm-1.2/src/base/uvm_report_server.svh(847) @ 152457100: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :    4
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[UVM/RELNOTES]     1
+[test_file]     1
+[version]     1
+
+$finish called from file "/home/morris/uvm-1.2/src/base/uvm_root.svh", line 517.
+$finish at simulation time            152457100
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 1524571000 ps
+CPU Time:      7.260 seconds;       Data structure size:   0.2Mb
+Tue Mar  8 13:26:00 2016
+
+Note-[RT_BS] Larger stack needed
+  Note: Bumping stack limit from 8192 to 8250 Kbytes.
+
+Chronologic VCS simulator copyright 1991-2014
+Contains Synopsys proprietary information.
+Compiler version I-2014.03-2; Runtime version I-2014.03-2;  Mar  8 13:26 2016
+UVM_INFO /home/morris/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test l0_test...
+UVM_INFO lcduvm.svp(5) @ 0: uvm_test_top.env [version] 0.002
+UVM_INFO lcduvm.svp(5) @ 5100: seqr@@file [test_file] t6.txt
+UVM_INFO /home/morris/uvm-1.2/src/base/uvm_report_server.svh(847) @ 193347100: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :    4
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[UVM/RELNOTES]     1
+[test_file]     1
+[version]     1
+
+$finish called from file "/home/morris/uvm-1.2/src/base/uvm_root.svh", line 517.
+$finish at simulation time            193347100
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 1933471000 ps
+CPU Time:      8.970 seconds;       Data structure size:   0.2Mb
+Tue Mar  8 13:26:09 2016
+
+Note-[RT_BS] Larger stack needed
+  Note: Bumping stack limit from 8192 to 8250 Kbytes.
+
+Chronologic VCS simulator copyright 1991-2014
+Contains Synopsys proprietary information.
+Compiler version I-2014.03-2; Runtime version I-2014.03-2;  Mar  8 13:26 2016
+UVM_INFO /home/morris/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test l0_test...
+UVM_INFO lcduvm.svp(5) @ 0: uvm_test_top.env [version] 0.002
+UVM_INFO lcduvm.svp(5) @ 5100: seqr@@file [test_file] t7.txt
+UVM_INFO /home/morris/uvm-1.2/src/base/uvm_report_server.svh(847) @ 238749100: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :    4
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[UVM/RELNOTES]     1
+[test_file]     1
+[version]     1
+
+$finish called from file "/home/morris/uvm-1.2/src/base/uvm_root.svh", line 517.
+$finish at simulation time            238749100
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 2387491000 ps
+CPU Time:     10.960 seconds;       Data structure size:   0.2Mb
+Tue Mar  8 13:26:21 2016
+UVM_ERROR :    0
+UVM_ERROR :    0
+UVM_ERROR :    0
+UVM_ERROR :    0
+UVM_ERROR :    0
+UVM_ERROR :    0
+UVM_ERROR :    0
+UVM_ERROR :    0
+UVM_ERROR :    0
+UVM_ERROR :    0
+UVM_ERROR :    0
+UVM_ERROR :    0
+UVM_ERROR :    0
+UVM_ERROR :    0
+UVM_ERROR :    0
+UVM_ERROR :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+UVM_FATAL :    0
+UVM_FATAL :    0
+UVM_FATAL :    0
+UVM_FATAL :    0

@@ -1,0 +1,891 @@
+module mem_map(mem_add_rd,mem_add_wr,HRDATA,HWDATA,HWRITE,pal_write,pal_wdata,pal_waddr);
+  input [31:0] HWDATA,mem_add_rd,mem_add_wr;
+  input HWRITE;
+  output logic [31:0] pal_wdata;
+  output logic [6:0] pal_waddr;
+  output logic pal_write;
+  output logic [31:0] HRDATA;
+  
+  
+
+  LCD_CFG_REG LCD_CFG;
+  LCD_TIMH_REG LCD_TIMH;
+  LCD_TIMV_REG LCD_TIMV;
+  LCD_POL_REG LCD_POL;
+  LCD_LE_REG LCD_LE;
+  LCD_UPBASE_REG LCD_UPBASE;
+  LCD_LPBASE_REG LCD_LPBASE;
+  LCD_CTRL_REG LCD_CTRL;
+  LCD_INTMSK_REG LCD_INTMSK;
+  LCD_INTRAW_REG LCD_INTRAW;
+  LCD_INTSTAT_REG LCD_INTSTAT;
+  LCD_INTCLR_REG LCD_INTCLR;
+  LCD_UPCURR_REG LCD_UPCURR;
+  LCD_LPCURR_REG LCD_LPCURR;
+  LCD_PAL_REG LCD_PAL[0:127];
+  CRSR_IMG_REG CRSR_IMG[0:255];
+  CRSR_CTRL_REG CRSR_CTRL;
+  CRSR_CFG_REG CRSR_CFG;
+  CRSR_PAL0_REG CRSR_PAL0;
+  CRSR_PAL1_REG CRSR_PAL1;
+  CRSR_XY_REG CRSR_XY;
+  CRSR_CLIP_REG CRSR_CLIP;
+  CRSR_INTMSK_REG CRSR_INTMSK;
+  CRSR_INTCLR_REG CRSR_INTCLR;
+  CRSR_INTRAW_REG CRSR_INTRAW;
+  CRSR_INTSTAT_REG CRSR_INTSTAT;
+  
+  always @(mem_add_rd)
+  begin
+//    if (HWRITE==0)
+//    begin
+      case (mem_add_rd)
+        32'hE01FC1B8, 32'hE11FC1B8 : HRDATA = LCD_CFG;
+        32'hFFE10000:HRDATA = LCD_TIMH;
+        32'hFFE10004:HRDATA = LCD_TIMV;
+        32'hFFE10008:HRDATA = LCD_POL;
+        32'hFFE1000C:HRDATA = LCD_LE;
+        32'hFFE10010:HRDATA = LCD_UPBASE;
+        32'hFFE10014:HRDATA = LCD_LPBASE;
+        32'hFFE10018:HRDATA = LCD_CTRL;
+        32'hFFE1001C:HRDATA = LCD_INTMSK;
+        32'hFFE10020:HRDATA = LCD_INTRAW;
+        32'hFFE10024:HRDATA = LCD_INTSTAT;
+        32'hFFE10028:HRDATA = 0;//////ERROR LCD_INTCLR THIS REGISTER ONLY WRITE ENABLED
+        32'hFFE1002C:HRDATA = LCD_UPCURR; 
+        32'hFFE10030:HRDATA = LCD_LPCURR; 
+        
+        32'hFFE10200:HRDATA = LCD_PAL[0];
+        32'hFFE10204:HRDATA = LCD_PAL[1];
+        32'hFFE10208:HRDATA = LCD_PAL[2];
+        32'hFFE1020C:HRDATA = LCD_PAL[3];
+        32'hFFE10210:HRDATA = LCD_PAL[4];
+        32'hFFE10214:HRDATA = LCD_PAL[5];
+        32'hFFE10218:HRDATA = LCD_PAL[6];
+        32'hFFE1021C:HRDATA = LCD_PAL[7];
+        32'hFFE10220:HRDATA = LCD_PAL[8];
+        32'hFFE10224:HRDATA = LCD_PAL[9];
+        32'hFFE10228:HRDATA = LCD_PAL[10];
+        32'hFFE1022C:HRDATA = LCD_PAL[11];
+        32'hFFE10230:HRDATA = LCD_PAL[12];
+        32'hFFE10234:HRDATA = LCD_PAL[13];
+        32'hFFE10238:HRDATA = LCD_PAL[14];
+        32'hFFE1023C:HRDATA = LCD_PAL[15];
+        32'hFFE10240:HRDATA = LCD_PAL[16];
+        32'hFFE10244:HRDATA = LCD_PAL[17];
+        32'hFFE10248:HRDATA = LCD_PAL[18];
+        32'hFFE1024C:HRDATA = LCD_PAL[19];
+        32'hFFE10250:HRDATA = LCD_PAL[20];
+        32'hFFE10254:HRDATA = LCD_PAL[21];
+        32'hFFE10258:HRDATA = LCD_PAL[22];
+        32'hFFE1025C:HRDATA = LCD_PAL[23];
+        32'hFFE10260:HRDATA = LCD_PAL[24];
+        32'hFFE10264:HRDATA = LCD_PAL[25];
+        32'hFFE10268:HRDATA = LCD_PAL[26];
+        32'hFFE1026C:HRDATA = LCD_PAL[27];
+        32'hFFE10270:HRDATA = LCD_PAL[28];
+        32'hFFE10274:HRDATA = LCD_PAL[29];
+        32'hFFE10278:HRDATA = LCD_PAL[30];
+        32'hFFE1027C:HRDATA = LCD_PAL[31];
+        32'hFFE10280:HRDATA = LCD_PAL[32];
+        32'hFFE10284:HRDATA = LCD_PAL[33];
+        32'hFFE10288:HRDATA = LCD_PAL[34];
+        32'hFFE1028C:HRDATA = LCD_PAL[35];
+        32'hFFE10290:HRDATA = LCD_PAL[36];
+        32'hFFE10294:HRDATA = LCD_PAL[37];
+        32'hFFE10298:HRDATA = LCD_PAL[38];
+        32'hFFE1029C:HRDATA = LCD_PAL[39];
+        32'hFFE102A0:HRDATA = LCD_PAL[40];
+        32'hFFE102A4:HRDATA = LCD_PAL[41];
+        32'hFFE102A8:HRDATA = LCD_PAL[42];
+        32'hFFE102AC:HRDATA = LCD_PAL[43];
+        32'hFFE102B0:HRDATA = LCD_PAL[44];
+        32'hFFE102B4:HRDATA = LCD_PAL[45];
+        32'hFFE102B8:HRDATA = LCD_PAL[46];
+        32'hFFE102BC:HRDATA = LCD_PAL[47];
+        32'hFFE102C0:HRDATA = LCD_PAL[48];
+        32'hFFE102C4:HRDATA = LCD_PAL[49];
+        32'hFFE102C8:HRDATA = LCD_PAL[50];
+        32'hFFE102CC:HRDATA = LCD_PAL[51];
+        32'hFFE102D0:HRDATA = LCD_PAL[52];
+        32'hFFE102D4:HRDATA = LCD_PAL[53];
+        32'hFFE102D8:HRDATA = LCD_PAL[54];
+        32'hFFE102DC:HRDATA = LCD_PAL[55];
+        32'hFFE102E0:HRDATA = LCD_PAL[56];
+        32'hFFE102E4:HRDATA = LCD_PAL[57];
+        32'hFFE102E8:HRDATA = LCD_PAL[58];
+        32'hFFE102EC:HRDATA = LCD_PAL[59];
+        32'hFFE102F0:HRDATA = LCD_PAL[60];
+        32'hFFE102F4:HRDATA = LCD_PAL[61];
+        32'hFFE102F8:HRDATA = LCD_PAL[62];
+        32'hFFE102FC:HRDATA = LCD_PAL[63];
+        32'hFFE10300:HRDATA = LCD_PAL[64];
+        32'hFFE10304:HRDATA = LCD_PAL[65];
+        32'hFFE10308:HRDATA = LCD_PAL[66];
+        32'hFFE1030C:HRDATA = LCD_PAL[67];
+        32'hFFE10310:HRDATA = LCD_PAL[68];
+        32'hFFE10314:HRDATA = LCD_PAL[69];
+        32'hFFE10318:HRDATA = LCD_PAL[70];
+        32'hFFE1031C:HRDATA = LCD_PAL[71];
+        32'hFFE10320:HRDATA = LCD_PAL[72];
+        32'hFFE10324:HRDATA = LCD_PAL[73];
+        32'hFFE10328:HRDATA = LCD_PAL[74];
+        32'hFFE1032C:HRDATA = LCD_PAL[75];
+        32'hFFE10330:HRDATA = LCD_PAL[76];
+        32'hFFE10334:HRDATA = LCD_PAL[77];
+        32'hFFE10338:HRDATA = LCD_PAL[78];
+        32'hFFE1033C:HRDATA = LCD_PAL[79];
+        32'hFFE10340:HRDATA = LCD_PAL[80];
+        32'hFFE10344:HRDATA = LCD_PAL[81];
+        32'hFFE10348:HRDATA = LCD_PAL[82];
+        32'hFFE1034C:HRDATA = LCD_PAL[83];
+        32'hFFE10350:HRDATA = LCD_PAL[84];
+        32'hFFE10354:HRDATA = LCD_PAL[85];
+        32'hFFE10358:HRDATA = LCD_PAL[86];
+        32'hFFE1035C:HRDATA = LCD_PAL[87];
+        32'hFFE10360:HRDATA = LCD_PAL[88];
+        32'hFFE10364:HRDATA = LCD_PAL[89];
+        32'hFFE10368:HRDATA = LCD_PAL[90];
+        32'hFFE1036C:HRDATA = LCD_PAL[91];
+        32'hFFE10370:HRDATA = LCD_PAL[92];
+        32'hFFE10374:HRDATA = LCD_PAL[93];
+        32'hFFE10378:HRDATA = LCD_PAL[94];
+        32'hFFE1037C:HRDATA = LCD_PAL[95];
+        32'hFFE10380:HRDATA = LCD_PAL[96];
+        32'hFFE10384:HRDATA = LCD_PAL[97];
+        32'hFFE10388:HRDATA = LCD_PAL[98];
+        32'hFFE1038C:HRDATA = LCD_PAL[99];
+        32'hFFE10390:HRDATA = LCD_PAL[100];
+        32'hFFE10394:HRDATA = LCD_PAL[101];
+        32'hFFE10398:HRDATA = LCD_PAL[102];
+        32'hFFE1039C:HRDATA = LCD_PAL[103];
+        32'hFFE103A0:HRDATA = LCD_PAL[104];
+        32'hFFE103A4:HRDATA = LCD_PAL[105];
+        32'hFFE103A8:HRDATA = LCD_PAL[106];
+        32'hFFE103AC:HRDATA = LCD_PAL[107];
+        32'hFFE103B0:HRDATA = LCD_PAL[108];
+        32'hFFE103B4:HRDATA = LCD_PAL[109];
+        32'hFFE103B8:HRDATA = LCD_PAL[110];
+        32'hFFE103BC:HRDATA = LCD_PAL[111];
+        32'hFFE103C0:HRDATA = LCD_PAL[112];
+        32'hFFE103C4:HRDATA = LCD_PAL[113];
+        32'hFFE103C8:HRDATA = LCD_PAL[114];
+        32'hFFE103CC:HRDATA = LCD_PAL[115];
+        32'hFFE103D0:HRDATA = LCD_PAL[116];
+        32'hFFE103D4:HRDATA = LCD_PAL[117];
+        32'hFFE103D8:HRDATA = LCD_PAL[118];
+        32'hFFE103DC:HRDATA = LCD_PAL[119];
+        32'hFFE103E0:HRDATA = LCD_PAL[120];
+        32'hFFE103E4:HRDATA = LCD_PAL[121];
+        32'hFFE103E8:HRDATA = LCD_PAL[122];
+        32'hFFE103EC:HRDATA = LCD_PAL[123];
+        32'hFFE103F0:HRDATA = LCD_PAL[124];
+        32'hFFE103F4:HRDATA = LCD_PAL[125];
+        32'hFFE103F8:HRDATA = LCD_PAL[126];
+        32'hFFE103FC:HRDATA = LCD_PAL[127];
+        
+        32'hFFE10800:HRDATA = CRSR_IMG[0];
+        32'hFFE10804:HRDATA = CRSR_IMG[1];
+        32'hFFE10808:HRDATA = CRSR_IMG[2];
+        32'hFFE1080C:HRDATA = CRSR_IMG[3];
+        32'hFFE10810:HRDATA = CRSR_IMG[4];
+        32'hFFE10814:HRDATA = CRSR_IMG[5];
+        32'hFFE10818:HRDATA = CRSR_IMG[6];
+        32'hFFE1081C:HRDATA = CRSR_IMG[7];
+        32'hFFE10820:HRDATA = CRSR_IMG[8];
+        32'hFFE10824:HRDATA = CRSR_IMG[9];
+        32'hFFE10828:HRDATA = CRSR_IMG[10];
+        32'hFFE1082C:HRDATA = CRSR_IMG[11];
+        32'hFFE10830:HRDATA = CRSR_IMG[12];
+        32'hFFE10834:HRDATA = CRSR_IMG[13];
+        32'hFFE10838:HRDATA = CRSR_IMG[14];
+        32'hFFE1083C:HRDATA = CRSR_IMG[15];
+        32'hFFE10840:HRDATA = CRSR_IMG[16];
+        32'hFFE10844:HRDATA = CRSR_IMG[17];
+        32'hFFE10848:HRDATA = CRSR_IMG[18];
+        32'hFFE1084C:HRDATA = CRSR_IMG[19];
+        32'hFFE10850:HRDATA = CRSR_IMG[20];
+        32'hFFE10854:HRDATA = CRSR_IMG[21];
+        32'hFFE10858:HRDATA = CRSR_IMG[22];
+        32'hFFE1085C:HRDATA = CRSR_IMG[23];
+        32'hFFE10860:HRDATA = CRSR_IMG[24];
+        32'hFFE10864:HRDATA = CRSR_IMG[25];
+        32'hFFE10868:HRDATA = CRSR_IMG[26];
+        32'hFFE1086C:HRDATA = CRSR_IMG[27];
+        32'hFFE10870:HRDATA = CRSR_IMG[28];
+        32'hFFE10874:HRDATA = CRSR_IMG[29];
+        32'hFFE10878:HRDATA = CRSR_IMG[30];
+        32'hFFE1087C:HRDATA = CRSR_IMG[31];
+        32'hFFE10880:HRDATA = CRSR_IMG[32];
+        32'hFFE10884:HRDATA = CRSR_IMG[33];
+        32'hFFE10888:HRDATA = CRSR_IMG[34];
+        32'hFFE1088C:HRDATA = CRSR_IMG[35];
+        32'hFFE10890:HRDATA = CRSR_IMG[36];
+        32'hFFE10894:HRDATA = CRSR_IMG[37];
+        32'hFFE10898:HRDATA = CRSR_IMG[38];
+        32'hFFE1089C:HRDATA = CRSR_IMG[39];
+        32'hFFE108A0:HRDATA = CRSR_IMG[40];
+        32'hFFE108A4:HRDATA = CRSR_IMG[41];
+        32'hFFE108A8:HRDATA = CRSR_IMG[42];
+        32'hFFE108AC:HRDATA = CRSR_IMG[43];
+        32'hFFE108B0:HRDATA = CRSR_IMG[44];
+        32'hFFE108B4:HRDATA = CRSR_IMG[45];
+        32'hFFE108B8:HRDATA = CRSR_IMG[46];
+        32'hFFE108BC:HRDATA = CRSR_IMG[47];
+        32'hFFE108C0:HRDATA = CRSR_IMG[48];
+        32'hFFE108C4:HRDATA = CRSR_IMG[49];
+        32'hFFE108C8:HRDATA = CRSR_IMG[50];
+        32'hFFE108CC:HRDATA = CRSR_IMG[51];
+        32'hFFE108D0:HRDATA = CRSR_IMG[52];
+        32'hFFE108D4:HRDATA = CRSR_IMG[53];
+        32'hFFE108D8:HRDATA = CRSR_IMG[54];
+        32'hFFE108DC:HRDATA = CRSR_IMG[55];
+        32'hFFE108E0:HRDATA = CRSR_IMG[56];
+        32'hFFE108E4:HRDATA = CRSR_IMG[57];
+        32'hFFE108E8:HRDATA = CRSR_IMG[58];
+        32'hFFE108EC:HRDATA = CRSR_IMG[59];
+        32'hFFE108F0:HRDATA = CRSR_IMG[60];
+        32'hFFE108F4:HRDATA = CRSR_IMG[61];
+        32'hFFE108F8:HRDATA = CRSR_IMG[62];
+        32'hFFE108FC:HRDATA = CRSR_IMG[63];
+        32'hFFE10900:HRDATA = CRSR_IMG[64];
+        32'hFFE10904:HRDATA = CRSR_IMG[65];
+        32'hFFE10908:HRDATA = CRSR_IMG[66];
+        32'hFFE1090C:HRDATA = CRSR_IMG[67];
+        32'hFFE10910:HRDATA = CRSR_IMG[68];
+        32'hFFE10914:HRDATA = CRSR_IMG[69];
+        32'hFFE10918:HRDATA = CRSR_IMG[70];
+        32'hFFE1091C:HRDATA = CRSR_IMG[71];
+        32'hFFE10920:HRDATA = CRSR_IMG[72];
+        32'hFFE10924:HRDATA = CRSR_IMG[73];
+        32'hFFE10928:HRDATA = CRSR_IMG[74];
+        32'hFFE1092C:HRDATA = CRSR_IMG[75];
+        32'hFFE10930:HRDATA = CRSR_IMG[76];
+        32'hFFE10934:HRDATA = CRSR_IMG[77];
+        32'hFFE10938:HRDATA = CRSR_IMG[78];
+        32'hFFE1093C:HRDATA = CRSR_IMG[79];
+        32'hFFE10940:HRDATA = CRSR_IMG[80];
+        32'hFFE10944:HRDATA = CRSR_IMG[81];
+        32'hFFE10948:HRDATA = CRSR_IMG[82];
+        32'hFFE1094C:HRDATA = CRSR_IMG[83];
+        32'hFFE10950:HRDATA = CRSR_IMG[84];
+        32'hFFE10954:HRDATA = CRSR_IMG[85];
+        32'hFFE10958:HRDATA = CRSR_IMG[86];
+        32'hFFE1095C:HRDATA = CRSR_IMG[87];
+        32'hFFE10960:HRDATA = CRSR_IMG[88];
+        32'hFFE10964:HRDATA = CRSR_IMG[89];
+        32'hFFE10968:HRDATA = CRSR_IMG[90];
+        32'hFFE1096C:HRDATA = CRSR_IMG[91];
+        32'hFFE10970:HRDATA = CRSR_IMG[92];
+        32'hFFE10974:HRDATA = CRSR_IMG[93];
+        32'hFFE10978:HRDATA = CRSR_IMG[94];
+        32'hFFE1097C:HRDATA = CRSR_IMG[95];
+        32'hFFE10980:HRDATA = CRSR_IMG[96];
+        32'hFFE10984:HRDATA = CRSR_IMG[97];
+        32'hFFE10988:HRDATA = CRSR_IMG[98];
+        32'hFFE1098C:HRDATA = CRSR_IMG[99];
+        32'hFFE10990:HRDATA = CRSR_IMG[100];
+        32'hFFE10994:HRDATA = CRSR_IMG[101];
+        32'hFFE10998:HRDATA = CRSR_IMG[102];
+        32'hFFE1099C:HRDATA = CRSR_IMG[103];
+        32'hFFE109A0:HRDATA = CRSR_IMG[104];
+        32'hFFE109A4:HRDATA = CRSR_IMG[105];
+        32'hFFE109A8:HRDATA = CRSR_IMG[106];
+        32'hFFE109AC:HRDATA = CRSR_IMG[107];
+        32'hFFE109B0:HRDATA = CRSR_IMG[108];
+        32'hFFE109B4:HRDATA = CRSR_IMG[109];
+        32'hFFE109B8:HRDATA = CRSR_IMG[110];
+        32'hFFE109BC:HRDATA = CRSR_IMG[111];
+        32'hFFE109C0:HRDATA = CRSR_IMG[112];
+        32'hFFE109C4:HRDATA = CRSR_IMG[113];
+        32'hFFE109C8:HRDATA = CRSR_IMG[114];
+        32'hFFE109CC:HRDATA = CRSR_IMG[115];
+        32'hFFE109D0:HRDATA = CRSR_IMG[116];
+        32'hFFE109D4:HRDATA = CRSR_IMG[117];
+        32'hFFE109D8:HRDATA = CRSR_IMG[118];
+        32'hFFE109DC:HRDATA = CRSR_IMG[119];
+        32'hFFE109E0:HRDATA = CRSR_IMG[120];
+        32'hFFE109E4:HRDATA = CRSR_IMG[121];
+        32'hFFE109E8:HRDATA = CRSR_IMG[122];
+        32'hFFE109EC:HRDATA = CRSR_IMG[123];
+        32'hFFE109F0:HRDATA = CRSR_IMG[124];
+        32'hFFE109F4:HRDATA = CRSR_IMG[125];
+        32'hFFE109F8:HRDATA = CRSR_IMG[126];
+        32'hFFE109FC:HRDATA = CRSR_IMG[127];
+        32'hFFE10A00:HRDATA = CRSR_IMG[128];
+        32'hFFE10A04:HRDATA = CRSR_IMG[129];
+        32'hFFE10A08:HRDATA = CRSR_IMG[130];
+        32'hFFE10A0C:HRDATA = CRSR_IMG[131];
+        32'hFFE10A10:HRDATA = CRSR_IMG[132];
+        32'hFFE10A14:HRDATA = CRSR_IMG[133];
+        32'hFFE10A18:HRDATA = CRSR_IMG[134];
+        32'hFFE10A1C:HRDATA = CRSR_IMG[135];
+        32'hFFE10A20:HRDATA = CRSR_IMG[136];
+        32'hFFE10A24:HRDATA = CRSR_IMG[137];
+        32'hFFE10A28:HRDATA = CRSR_IMG[138];
+        32'hFFE10A2C:HRDATA = CRSR_IMG[139];
+        32'hFFE10A30:HRDATA = CRSR_IMG[140];
+        32'hFFE10A34:HRDATA = CRSR_IMG[141];
+        32'hFFE10A38:HRDATA = CRSR_IMG[142];
+        32'hFFE10A3C:HRDATA = CRSR_IMG[143];
+        32'hFFE10A40:HRDATA = CRSR_IMG[144];
+        32'hFFE10A44:HRDATA = CRSR_IMG[145];
+        32'hFFE10A48:HRDATA = CRSR_IMG[146];
+        32'hFFE10A4C:HRDATA = CRSR_IMG[147];
+        32'hFFE10A50:HRDATA = CRSR_IMG[148];
+        32'hFFE10A54:HRDATA = CRSR_IMG[149];
+        32'hFFE10A58:HRDATA = CRSR_IMG[150];
+        32'hFFE10A5C:HRDATA = CRSR_IMG[151];
+        32'hFFE10A60:HRDATA = CRSR_IMG[152];
+        32'hFFE10A64:HRDATA = CRSR_IMG[153];
+        32'hFFE10A68:HRDATA = CRSR_IMG[154];
+        32'hFFE10A6C:HRDATA = CRSR_IMG[155];
+        32'hFFE10A70:HRDATA = CRSR_IMG[156];
+        32'hFFE10A74:HRDATA = CRSR_IMG[157];
+        32'hFFE10A78:HRDATA = CRSR_IMG[158];
+        32'hFFE10A7C:HRDATA = CRSR_IMG[159];
+        32'hFFE10A80:HRDATA = CRSR_IMG[160];
+        32'hFFE10A84:HRDATA = CRSR_IMG[161];
+        32'hFFE10A88:HRDATA = CRSR_IMG[162];
+        32'hFFE10A8C:HRDATA = CRSR_IMG[163];
+        32'hFFE10A90:HRDATA = CRSR_IMG[164];
+        32'hFFE10A94:HRDATA = CRSR_IMG[165];
+        32'hFFE10A98:HRDATA = CRSR_IMG[166];
+        32'hFFE10A9C:HRDATA = CRSR_IMG[167];
+        32'hFFE10AA0:HRDATA = CRSR_IMG[168];
+        32'hFFE10AA4:HRDATA = CRSR_IMG[169];
+        32'hFFE10AA8:HRDATA = CRSR_IMG[170];
+        32'hFFE10AAC:HRDATA = CRSR_IMG[171];
+        32'hFFE10AB0:HRDATA = CRSR_IMG[172];
+        32'hFFE10AB4:HRDATA = CRSR_IMG[173];
+        32'hFFE10AB8:HRDATA = CRSR_IMG[174];
+        32'hFFE10ABC:HRDATA = CRSR_IMG[175];
+        32'hFFE10AC0:HRDATA = CRSR_IMG[176];
+        32'hFFE10AC4:HRDATA = CRSR_IMG[177];
+        32'hFFE10AC8:HRDATA = CRSR_IMG[178];
+        32'hFFE10ACC:HRDATA = CRSR_IMG[179];
+        32'hFFE10AD0:HRDATA = CRSR_IMG[180];
+        32'hFFE10AD4:HRDATA = CRSR_IMG[181];
+        32'hFFE10AD8:HRDATA = CRSR_IMG[182];
+        32'hFFE10ADC:HRDATA = CRSR_IMG[183];
+        32'hFFE10AE0:HRDATA = CRSR_IMG[184];
+        32'hFFE10AE4:HRDATA = CRSR_IMG[185];
+        32'hFFE10AE8:HRDATA = CRSR_IMG[186];
+        32'hFFE10AEC:HRDATA = CRSR_IMG[187];
+        32'hFFE10AF0:HRDATA = CRSR_IMG[188];
+        32'hFFE10AF4:HRDATA = CRSR_IMG[189];
+        32'hFFE10AF8:HRDATA = CRSR_IMG[190];
+        32'hFFE10AFC:HRDATA = CRSR_IMG[191];
+        32'hFFE10B00:HRDATA = CRSR_IMG[192];
+        32'hFFE10B04:HRDATA = CRSR_IMG[193];
+        32'hFFE10B08:HRDATA = CRSR_IMG[194];
+        32'hFFE10B0C:HRDATA = CRSR_IMG[195];
+        32'hFFE10B10:HRDATA = CRSR_IMG[196];
+        32'hFFE10B14:HRDATA = CRSR_IMG[197];
+        32'hFFE10B18:HRDATA = CRSR_IMG[198];
+        32'hFFE10B1C:HRDATA = CRSR_IMG[199];
+        32'hFFE10B20:HRDATA = CRSR_IMG[200];
+        32'hFFE10B24:HRDATA = CRSR_IMG[201];
+        32'hFFE10B28:HRDATA = CRSR_IMG[202];
+        32'hFFE10B2C:HRDATA = CRSR_IMG[203];
+        32'hFFE10B30:HRDATA = CRSR_IMG[204];
+        32'hFFE10B34:HRDATA = CRSR_IMG[205];
+        32'hFFE10B38:HRDATA = CRSR_IMG[206];
+        32'hFFE10B3C:HRDATA = CRSR_IMG[207];
+        32'hFFE10B40:HRDATA = CRSR_IMG[208];
+        32'hFFE10B44:HRDATA = CRSR_IMG[209];
+        32'hFFE10B48:HRDATA = CRSR_IMG[210];
+        32'hFFE10B4C:HRDATA = CRSR_IMG[211];
+        32'hFFE10B50:HRDATA = CRSR_IMG[212];
+        32'hFFE10B54:HRDATA = CRSR_IMG[213];
+        32'hFFE10B58:HRDATA = CRSR_IMG[214];
+        32'hFFE10B5C:HRDATA = CRSR_IMG[215];
+        32'hFFE10B60:HRDATA = CRSR_IMG[216];
+        32'hFFE10B64:HRDATA = CRSR_IMG[217];
+        32'hFFE10B68:HRDATA = CRSR_IMG[218];
+        32'hFFE10B6C:HRDATA = CRSR_IMG[219];
+        32'hFFE10B70:HRDATA = CRSR_IMG[220];
+        32'hFFE10B74:HRDATA = CRSR_IMG[221];
+        32'hFFE10B78:HRDATA = CRSR_IMG[222];
+        32'hFFE10B7C:HRDATA = CRSR_IMG[223];
+        32'hFFE10B80:HRDATA = CRSR_IMG[224];
+        32'hFFE10B84:HRDATA = CRSR_IMG[225];
+        32'hFFE10B88:HRDATA = CRSR_IMG[226];
+        32'hFFE10B8C:HRDATA = CRSR_IMG[227];
+        32'hFFE10B90:HRDATA = CRSR_IMG[228];
+        32'hFFE10B94:HRDATA = CRSR_IMG[229];
+        32'hFFE10B98:HRDATA = CRSR_IMG[230];
+        32'hFFE10B9C:HRDATA = CRSR_IMG[231];
+        32'hFFE10BA0:HRDATA = CRSR_IMG[232];
+        32'hFFE10BA4:HRDATA = CRSR_IMG[233];
+        32'hFFE10BA8:HRDATA = CRSR_IMG[234];
+        32'hFFE10BAC:HRDATA = CRSR_IMG[235];
+        32'hFFE10BB0:HRDATA = CRSR_IMG[236];
+        32'hFFE10BB4:HRDATA = CRSR_IMG[237];
+        32'hFFE10BB8:HRDATA = CRSR_IMG[238];
+        32'hFFE10BBC:HRDATA = CRSR_IMG[239];
+        32'hFFE10BC0:HRDATA = CRSR_IMG[240];
+        32'hFFE10BC4:HRDATA = CRSR_IMG[241];
+        32'hFFE10BC8:HRDATA = CRSR_IMG[242];
+        32'hFFE10BCC:HRDATA = CRSR_IMG[243];
+        32'hFFE10BD0:HRDATA = CRSR_IMG[244];
+        32'hFFE10BD4:HRDATA = CRSR_IMG[245];
+        32'hFFE10BD8:HRDATA = CRSR_IMG[246];
+        32'hFFE10BDC:HRDATA = CRSR_IMG[247];
+        32'hFFE10BE0:HRDATA = CRSR_IMG[248];
+        32'hFFE10BE4:HRDATA = CRSR_IMG[249];
+        32'hFFE10BE8:HRDATA = CRSR_IMG[250];
+        32'hFFE10BEC:HRDATA = CRSR_IMG[251];
+        32'hFFE10BF0:HRDATA = CRSR_IMG[252];
+        32'hFFE10BF4:HRDATA = CRSR_IMG[253];
+        32'hFFE10BF8:HRDATA = CRSR_IMG[254];
+        32'hFFE10BFC:HRDATA = CRSR_IMG[255];
+        
+       
+        32'hFFE10C00:HRDATA = CRSR_CTRL; 
+        32'hFFE10C04:HRDATA = CRSR_CFG; 
+        32'hFFE10C08:HRDATA = CRSR_PAL0;
+        32'hFFE10C0C:HRDATA = CRSR_PAL1;
+        32'hFFE10C10:HRDATA = CRSR_XY;
+        32'hFFE10C14:HRDATA = CRSR_CLIP;
+        32'hFFE10C20:HRDATA = CRSR_INTMSK;
+        32'hFFE10C24:HRDATA = CRSR_INTCLR;
+        32'hFFE10C28:HRDATA = CRSR_INTRAW;
+        32'hFFE10C2C:HRDATA = CRSR_INTSTAT;
+      endcase
+//    end
+  end
+     
+  
+  initial
+  begin
+//    LCD_CFG = 0;
+//    LCD_TIMV = 0;
+    LCD_UPBASE = 0;
+  end
+  
+  
+  
+  always @(mem_add_wr)
+  begin
+//    if (HWRITE==1)
+//    begin
+    pal_write = 1'b0;
+      case (mem_add_wr)
+        32'hE01FC1B8,32'hE11FC1B8,32'hE21FC1B8,32'hE31FC1B8: LCD_CFG = HWDATA;
+        32'hFFE10000,32'hFEE10000,32'hFDE10000,32'hFCE10000: LCD_TIMH = HWDATA;
+        32'hFFE10004,32'hFEE10004,32'hFDE10004,32'hFCE10004: LCD_TIMV = HWDATA;
+        32'hFFE10008,32'hFEE10008,32'hFDE10008,32'hFCE10008: LCD_POL = HWDATA;
+        32'hFFE1000C,32'hFEE1000C,32'hFDE1000C,32'hFCE1000C: LCD_LE = HWDATA;
+        32'hFFE10010,32'hFEE10010,32'hFDE10010,32'hFCE10010: LCD_UPBASE = HWDATA;
+        32'hFFE10014,32'hFEE10014,32'hFDE10014,32'hFCE10014: LCD_LPBASE = HWDATA;
+        32'hFFE10018,32'hFEE10018,32'hFDE10018,32'hFCE10018: LCD_CTRL = HWDATA;
+        32'hFFE1001C,32'hFEE1001C,32'hFDE1001C,32'hFCE1001C: LCD_INTMSK = HWDATA;
+        32'hFFE10020,32'hFEE10020,32'hFDE10020,32'hFCE10020: LCD_INTRAW = HWDATA;
+        32'hFFE10024,32'hFEE10024,32'hFDE10024,32'hFCE10024: LCD_INTSTAT = HWDATA;
+        32'hFFE10028,32'hFEE10028,32'hFDE10028,32'hFCE10028: LCD_INTCLR = 0;//////ERROR LCD_INTCLR THIS REGISTER ONLY WRITE ENABLED
+        32'hFFE1002C,32'hFEE1002C,32'hFDE1002C,32'hFCE1002C: LCD_UPCURR = HWDATA;
+        32'hFFE10030,32'hFEE10030,32'hFDE10030,32'hFCE10030: LCD_LPCURR = HWDATA; 
+                                     
+        32'hFFE10200,32'hFEE10200,32'hFDE10200,32'hFCE10200: begin pal_wdata = HWDATA; pal_waddr = 7'h00; pal_write = 1'b1; end
+        32'hFFE10204,32'hFEE10204,32'hFDE10204,32'hFCE10204: begin pal_wdata = HWDATA; pal_waddr = 7'h01; pal_write = 1'b1; end
+        32'hFFE10208,32'hFEE10208,32'hFDE10208,32'hFCE10208: begin pal_wdata = HWDATA; pal_waddr = 7'h02; pal_write = 1'b1; end 
+        32'hFFE1020C,32'hFEE1020C,32'hFDE1020C,32'hFCE1020C: begin pal_wdata = HWDATA; pal_waddr = 7'h03; pal_write = 1'b1; end 
+        32'hFFE10210,32'hFEE10210,32'hFDE10210,32'hFCE10210: begin pal_wdata = HWDATA; pal_waddr = 7'h04; pal_write = 1'b1; end 
+        32'hFFE10214,32'hFEE10214,32'hFDE10214,32'hFCE10214: begin pal_wdata = HWDATA; pal_waddr = 7'h05; pal_write = 1'b1; end 
+        32'hFFE10218,32'hFEE10218,32'hFDE10218,32'hFCE10218: begin pal_wdata = HWDATA; pal_waddr = 7'h06; pal_write = 1'b1; end 
+        32'hFFE1021C,32'hFEE1021C,32'hFDE1021C,32'hFCE1021C: begin pal_wdata = HWDATA; pal_waddr = 7'h07; pal_write = 1'b1; end 
+        32'hFFE10220,32'hFEE10220,32'hFDE10220,32'hFCE10220: begin pal_wdata = HWDATA; pal_waddr = 7'h08; pal_write = 1'b1; end 
+        32'hFFE10224,32'hFEE10224,32'hFDE10224,32'hFCE10224: begin pal_wdata = HWDATA; pal_waddr = 7'h09; pal_write = 1'b1; end 
+        32'hFFE10228,32'hFEE10228,32'hFDE10228,32'hFCE10228: begin pal_wdata = HWDATA; pal_waddr = 7'h0A; pal_write = 1'b1; end 
+        32'hFFE1022C,32'hFEE1022C,32'hFDE1022C,32'hFCE1022C: begin pal_wdata = HWDATA; pal_waddr = 7'h0B; pal_write = 1'b1; end 
+        32'hFFE10230,32'hFEE10230,32'hFDE10230,32'hFCE10230: begin pal_wdata = HWDATA; pal_waddr = 7'h0C; pal_write = 1'b1; end 
+        32'hFFE10234,32'hFEE10234,32'hFDE10234,32'hFCE10234: begin pal_wdata = HWDATA; pal_waddr = 7'h0D; pal_write = 1'b1; end 
+        32'hFFE10238,32'hFEE10238,32'hFDE10238,32'hFCE10238: begin pal_wdata = HWDATA; pal_waddr = 7'h0E; pal_write = 1'b1; end 
+        32'hFFE1023C,32'hFEE1023C,32'hFDE1023C,32'hFCE1023C: begin pal_wdata = HWDATA; pal_waddr = 7'h0F; pal_write = 1'b1; end 
+        32'hFFE10240,32'hFEE10240,32'hFDE10240,32'hFCE10240: begin pal_wdata = HWDATA; pal_waddr = 7'h10; pal_write = 1'b1; end 
+        32'hFFE10244,32'hFEE10244,32'hFDE10244,32'hFCE10244: begin pal_wdata = HWDATA; pal_waddr = 7'h11; pal_write = 1'b1; end 
+        32'hFFE10248,32'hFEE10248,32'hFDE10248,32'hFCE10248: begin pal_wdata = HWDATA; pal_waddr = 7'h12; pal_write = 1'b1; end 
+        32'hFFE1024C,32'hFEE1024C,32'hFDE1024C,32'hFCE1024C: begin pal_wdata = HWDATA; pal_waddr = 7'h13; pal_write = 1'b1; end 
+        32'hFFE10250,32'hFEE10250,32'hFDE10250,32'hFCE10250: begin pal_wdata = HWDATA; pal_waddr = 7'h14; pal_write = 1'b1; end 
+        32'hFFE10254,32'hFEE10254,32'hFDE10254,32'hFCE10254: begin pal_wdata = HWDATA; pal_waddr = 7'h15; pal_write = 1'b1; end 
+        32'hFFE10258,32'hFEE10258,32'hFDE10258,32'hFCE10258: begin pal_wdata = HWDATA; pal_waddr = 7'h16; pal_write = 1'b1; end 
+        32'hFFE1025C,32'hFEE1025C,32'hFDE1025C,32'hFCE1025C: begin pal_wdata = HWDATA; pal_waddr = 7'h17; pal_write = 1'b1; end 
+        32'hFFE10260,32'hFEE10260,32'hFDE10260,32'hFCE10260: begin pal_wdata = HWDATA; pal_waddr = 7'h18; pal_write = 1'b1; end 
+        32'hFFE10264,32'hFEE10264,32'hFDE10264,32'hFCE10264: begin pal_wdata = HWDATA; pal_waddr = 7'h19; pal_write = 1'b1; end 
+        32'hFFE10268,32'hFEE10268,32'hFDE10268,32'hFCE10268: begin pal_wdata = HWDATA; pal_waddr = 7'h1A; pal_write = 1'b1; end 
+        32'hFFE1026C,32'hFEE1026C,32'hFDE1026C,32'hFCE1026C: begin pal_wdata = HWDATA; pal_waddr = 7'h1B; pal_write = 1'b1; end 
+        32'hFFE10270,32'hFEE10270,32'hFDE10270,32'hFCE10270: begin pal_wdata = HWDATA; pal_waddr = 7'h1C; pal_write = 1'b1; end 
+        32'hFFE10274,32'hFEE10274,32'hFDE10274,32'hFCE10274: begin pal_wdata = HWDATA; pal_waddr = 7'h1D; pal_write = 1'b1; end 
+        32'hFFE10278,32'hFEE10278,32'hFDE10278,32'hFCE10278: begin pal_wdata = HWDATA; pal_waddr = 7'h1E; pal_write = 1'b1; end 
+        32'hFFE1027C,32'hFEE1027C,32'hFDE1027C,32'hFCE1027C: begin pal_wdata = HWDATA; pal_waddr = 7'h1F; pal_write = 1'b1; end 
+        32'hFFE10280,32'hFEE10280,32'hFDE10280,32'hFCE10280: begin pal_wdata = HWDATA; pal_waddr = 7'h20; pal_write = 1'b1; end 
+        32'hFFE10284,32'hFEE10284,32'hFDE10284,32'hFCE10284: begin pal_wdata = HWDATA; pal_waddr = 7'h21; pal_write = 1'b1; end 
+        32'hFFE10288,32'hFEE10288,32'hFDE10288,32'hFCE10288: begin pal_wdata = HWDATA; pal_waddr = 7'h22; pal_write = 1'b1; end 
+        32'hFFE1028C,32'hFEE1028C,32'hFDE1028C,32'hFCE1028C: begin pal_wdata = HWDATA; pal_waddr = 7'h23; pal_write = 1'b1; end 
+        32'hFFE10290,32'hFEE10290,32'hFDE10290,32'hFCE10290: begin pal_wdata = HWDATA; pal_waddr = 7'h24; pal_write = 1'b1; end 
+        32'hFFE10294,32'hFEE10294,32'hFDE10294,32'hFCE10294: begin pal_wdata = HWDATA; pal_waddr = 7'h25; pal_write = 1'b1; end 
+        32'hFFE10298,32'hFEE10298,32'hFDE10298,32'hFCE10298: begin pal_wdata = HWDATA; pal_waddr = 7'h26; pal_write = 1'b1; end 
+        32'hFFE1029C,32'hFEE1029C,32'hFDE1029C,32'hFCE1029C: begin pal_wdata = HWDATA; pal_waddr = 7'h27; pal_write = 1'b1; end 
+        32'hFFE102A0,32'hFEE102A0,32'hFDE102A0,32'hFCE102A0: begin pal_wdata = HWDATA; pal_waddr = 7'h28; pal_write = 1'b1; end 
+        32'hFFE102A4,32'hFEE102A4,32'hFDE102A4,32'hFCE102A4: begin pal_wdata = HWDATA; pal_waddr = 7'h29; pal_write = 1'b1; end 
+        32'hFFE102A8,32'hFEE102A8,32'hFDE102A8,32'hFCE102A8: begin pal_wdata = HWDATA; pal_waddr = 7'h2A; pal_write = 1'b1; end 
+        32'hFFE102AC,32'hFEE102AC,32'hFDE102AC,32'hFCE102AC: begin pal_wdata = HWDATA; pal_waddr = 7'h2B; pal_write = 1'b1; end 
+        32'hFFE102B0,32'hFEE102B0,32'hFDE102B0,32'hFCE102B0: begin pal_wdata = HWDATA; pal_waddr = 7'h2C; pal_write = 1'b1; end 
+        32'hFFE102B4,32'hFEE102B4,32'hFDE102B4,32'hFCE102B4: begin pal_wdata = HWDATA; pal_waddr = 7'h2D; pal_write = 1'b1; end 
+        32'hFFE102B8,32'hFEE102B8,32'hFDE102B8,32'hFCE102B8: begin pal_wdata = HWDATA; pal_waddr = 7'h2E; pal_write = 1'b1; end 
+        32'hFFE102BC,32'hFEE102BC,32'hFDE102BC,32'hFCE102BC: begin pal_wdata = HWDATA; pal_waddr = 7'h2F; pal_write = 1'b1; end 
+        32'hFFE102C0,32'hFEE102C0,32'hFDE102C0,32'hFCE102C0: begin pal_wdata = HWDATA; pal_waddr = 7'h30; pal_write = 1'b1; end 
+        32'hFFE102C4,32'hFEE102C4,32'hFDE102C4,32'hFCE102C4: begin pal_wdata = HWDATA; pal_waddr = 7'h31; pal_write = 1'b1; end 
+        32'hFFE102C8,32'hFEE102C8,32'hFDE102C8,32'hFCE102C8: begin pal_wdata = HWDATA; pal_waddr = 7'h32; pal_write = 1'b1; end 
+        32'hFFE102CC,32'hFEE102CC,32'hFDE102CC,32'hFCE102CC: begin pal_wdata = HWDATA; pal_waddr = 7'h33; pal_write = 1'b1; end 
+        32'hFFE102D0,32'hFEE102D0,32'hFDE102D0,32'hFCE102D0: begin pal_wdata = HWDATA; pal_waddr = 7'h34; pal_write = 1'b1; end 
+        32'hFFE102D4,32'hFEE102D4,32'hFDE102D4,32'hFCE102D4: begin pal_wdata = HWDATA; pal_waddr = 7'h35; pal_write = 1'b1; end 
+        32'hFFE102D8,32'hFEE102D8,32'hFDE102D8,32'hFCE102D8: begin pal_wdata = HWDATA; pal_waddr = 7'h36; pal_write = 1'b1; end 
+        32'hFFE102DC,32'hFEE102DC,32'hFDE102DC,32'hFCE102DC: begin pal_wdata = HWDATA; pal_waddr = 7'h37; pal_write = 1'b1; end 
+        32'hFFE102E0,32'hFEE102E0,32'hFDE102E0,32'hFCE102E0: begin pal_wdata = HWDATA; pal_waddr = 7'h38; pal_write = 1'b1; end 
+        32'hFFE102E4,32'hFEE102E4,32'hFDE102E4,32'hFCE102E4: begin pal_wdata = HWDATA; pal_waddr = 7'h39; pal_write = 1'b1; end 
+        32'hFFE102E8,32'hFEE102E8,32'hFDE102E8,32'hFCE102E8: begin pal_wdata = HWDATA; pal_waddr = 7'h3A; pal_write = 1'b1; end 
+        32'hFFE102EC,32'hFEE102EC,32'hFDE102EC,32'hFCE102EC: begin pal_wdata = HWDATA; pal_waddr = 7'h3B; pal_write = 1'b1; end 
+        32'hFFE102F0,32'hFEE102F0,32'hFDE102F0,32'hFCE102F0: begin pal_wdata = HWDATA; pal_waddr = 7'h3C; pal_write = 1'b1; end 
+        32'hFFE102F4,32'hFEE102F4,32'hFDE102F4,32'hFCE102F4: begin pal_wdata = HWDATA; pal_waddr = 7'h3D; pal_write = 1'b1; end 
+        32'hFFE102F8,32'hFEE102F8,32'hFDE102F8,32'hFCE102F8: begin pal_wdata = HWDATA; pal_waddr = 7'h3E; pal_write = 1'b1; end 
+        32'hFFE102FC,32'hFEE102FC,32'hFDE102FC,32'hFCE102FC: begin pal_wdata = HWDATA; pal_waddr = 7'h3F; pal_write = 1'b1; end 
+        32'hFFE10300,32'hFEE10300,32'hFDE10300,32'hFCE10300: begin pal_wdata = HWDATA; pal_waddr = 7'h40; pal_write = 1'b1; end 
+        32'hFFE10304,32'hFEE10304,32'hFDE10304,32'hFCE10304: begin pal_wdata = HWDATA; pal_waddr = 7'h41; pal_write = 1'b1; end 
+        32'hFFE10308,32'hFEE10308,32'hFDE10308,32'hFCE10308: begin pal_wdata = HWDATA; pal_waddr = 7'h42; pal_write = 1'b1; end 
+        32'hFFE1030C,32'hFEE1030C,32'hFDE1030C,32'hFCE1030C: begin pal_wdata = HWDATA; pal_waddr = 7'h43; pal_write = 1'b1; end 
+        32'hFFE10310,32'hFEE10310,32'hFDE10310,32'hFCE10310: begin pal_wdata = HWDATA; pal_waddr = 7'h44; pal_write = 1'b1; end 
+        32'hFFE10314,32'hFEE10314,32'hFDE10314,32'hFCE10314: begin pal_wdata = HWDATA; pal_waddr = 7'h45; pal_write = 1'b1; end 
+        32'hFFE10318,32'hFEE10318,32'hFDE10318,32'hFCE10318: begin pal_wdata = HWDATA; pal_waddr = 7'h46; pal_write = 1'b1; end 
+        32'hFFE1031C,32'hFEE1031C,32'hFDE1031C,32'hFCE1031C: begin pal_wdata = HWDATA; pal_waddr = 7'h47; pal_write = 1'b1; end 
+        32'hFFE10320,32'hFEE10320,32'hFDE10320,32'hFCE10320: begin pal_wdata = HWDATA; pal_waddr = 7'h48; pal_write = 1'b1; end 
+        32'hFFE10324,32'hFEE10324,32'hFDE10324,32'hFCE10324: begin pal_wdata = HWDATA; pal_waddr = 7'h49; pal_write = 1'b1; end 
+        32'hFFE10328,32'hFEE10328,32'hFDE10328,32'hFCE10328: begin pal_wdata = HWDATA; pal_waddr = 7'h4A; pal_write = 1'b1; end 
+        32'hFFE1032C,32'hFEE1032C,32'hFDE1032C,32'hFCE1032C: begin pal_wdata = HWDATA; pal_waddr = 7'h4B; pal_write = 1'b1; end 
+        32'hFFE10330,32'hFEE10330,32'hFDE10330,32'hFCE10330: begin pal_wdata = HWDATA; pal_waddr = 7'h4C; pal_write = 1'b1; end 
+        32'hFFE10334,32'hFEE10334,32'hFDE10334,32'hFCE10334: begin pal_wdata = HWDATA; pal_waddr = 7'h4D; pal_write = 1'b1; end 
+        32'hFFE10338,32'hFEE10338,32'hFDE10338,32'hFCE10338: begin pal_wdata = HWDATA; pal_waddr = 7'h4E; pal_write = 1'b1; end 
+        32'hFFE1033C,32'hFEE1033C,32'hFDE1033C,32'hFCE1033C: begin pal_wdata = HWDATA; pal_waddr = 7'h4F; pal_write = 1'b1; end 
+        32'hFFE10340,32'hFEE10340,32'hFDE10340,32'hFCE10340: begin pal_wdata = HWDATA; pal_waddr = 7'h50; pal_write = 1'b1; end 
+        32'hFFE10344,32'hFEE10344,32'hFDE10344,32'hFCE10344: begin pal_wdata = HWDATA; pal_waddr = 7'h51; pal_write = 1'b1; end 
+        32'hFFE10348,32'hFEE10348,32'hFDE10348,32'hFCE10348: begin pal_wdata = HWDATA; pal_waddr = 7'h52; pal_write = 1'b1; end 
+        32'hFFE1034C,32'hFEE1034C,32'hFDE1034C,32'hFCE1034C: begin pal_wdata = HWDATA; pal_waddr = 7'h53; pal_write = 1'b1; end 
+        32'hFFE10350,32'hFEE10350,32'hFDE10350,32'hFCE10350: begin pal_wdata = HWDATA; pal_waddr = 7'h54; pal_write = 1'b1; end 
+        32'hFFE10354,32'hFEE10354,32'hFDE10354,32'hFCE10354: begin pal_wdata = HWDATA; pal_waddr = 7'h55; pal_write = 1'b1; end 
+        32'hFFE10358,32'hFEE10358,32'hFDE10358,32'hFCE10358: begin pal_wdata = HWDATA; pal_waddr = 7'h56; pal_write = 1'b1; end 
+        32'hFFE1035C,32'hFEE1035C,32'hFDE1035C,32'hFCE1035C: begin pal_wdata = HWDATA; pal_waddr = 7'h57; pal_write = 1'b1; end 
+        32'hFFE10360,32'hFEE10360,32'hFDE10360,32'hFCE10360: begin pal_wdata = HWDATA; pal_waddr = 7'h58; pal_write = 1'b1; end 
+        32'hFFE10364,32'hFEE10364,32'hFDE10364,32'hFCE10364: begin pal_wdata = HWDATA; pal_waddr = 7'h59; pal_write = 1'b1; end 
+        32'hFFE10368,32'hFEE10368,32'hFDE10368,32'hFCE10368: begin pal_wdata = HWDATA; pal_waddr = 7'h5A; pal_write = 1'b1; end 
+        32'hFFE1036C,32'hFEE1036C,32'hFDE1036C,32'hFCE1036C: begin pal_wdata = HWDATA; pal_waddr = 7'h5B; pal_write = 1'b1; end 
+        32'hFFE10370,32'hFEE10370,32'hFDE10370,32'hFCE10370: begin pal_wdata = HWDATA; pal_waddr = 7'h5C; pal_write = 1'b1; end 
+        32'hFFE10374,32'hFEE10374,32'hFDE10374,32'hFCE10374: begin pal_wdata = HWDATA; pal_waddr = 7'h5D; pal_write = 1'b1; end 
+        32'hFFE10378,32'hFEE10378,32'hFDE10378,32'hFCE10378: begin pal_wdata = HWDATA; pal_waddr = 7'h5E; pal_write = 1'b1; end 
+        32'hFFE1037C,32'hFEE1037C,32'hFDE1037C,32'hFCE1037C: begin pal_wdata = HWDATA; pal_waddr = 7'h5F; pal_write = 1'b1; end 
+        32'hFFE10380,32'hFEE10380,32'hFDE10380,32'hFCE10380: begin pal_wdata = HWDATA; pal_waddr = 7'h60; pal_write = 1'b1; end 
+        32'hFFE10384,32'hFEE10384,32'hFDE10384,32'hFCE10384: begin pal_wdata = HWDATA; pal_waddr = 7'h61; pal_write = 1'b1; end 
+        32'hFFE10388,32'hFEE10388,32'hFDE10388,32'hFCE10388: begin pal_wdata = HWDATA; pal_waddr = 7'h62; pal_write = 1'b1; end 
+        32'hFFE1038C,32'hFEE1038C,32'hFDE1038C,32'hFCE1038C: begin pal_wdata = HWDATA; pal_waddr = 7'h63; pal_write = 1'b1; end 
+        32'hFFE10390,32'hFEE10390,32'hFDE10390,32'hFCE10390: begin pal_wdata = HWDATA; pal_waddr = 7'h64; pal_write = 1'b1; end 
+        32'hFFE10394,32'hFEE10394,32'hFDE10394,32'hFCE10394: begin pal_wdata = HWDATA; pal_waddr = 7'h65; pal_write = 1'b1; end 
+        32'hFFE10398,32'hFEE10398,32'hFDE10398,32'hFCE10398: begin pal_wdata = HWDATA; pal_waddr = 7'h66; pal_write = 1'b1; end 
+        32'hFFE1039C,32'hFEE1039C,32'hFDE1039C,32'hFCE1039C: begin pal_wdata = HWDATA; pal_waddr = 7'h67; pal_write = 1'b1; end 
+        32'hFFE103A0,32'hFEE103A0,32'hFDE103A0,32'hFCE103A0: begin pal_wdata = HWDATA; pal_waddr = 7'h68; pal_write = 1'b1; end 
+        32'hFFE103A4,32'hFEE103A4,32'hFDE103A4,32'hFCE103A4: begin pal_wdata = HWDATA; pal_waddr = 7'h69; pal_write = 1'b1; end 
+        32'hFFE103A8,32'hFEE103A8,32'hFDE103A8,32'hFCE103A8: begin pal_wdata = HWDATA; pal_waddr = 7'h6A; pal_write = 1'b1; end 
+        32'hFFE103AC,32'hFEE103AC,32'hFDE103AC,32'hFCE103AC: begin pal_wdata = HWDATA; pal_waddr = 7'h6B; pal_write = 1'b1; end 
+        32'hFFE103B0,32'hFEE103B0,32'hFDE103B0,32'hFCE103B0: begin pal_wdata = HWDATA; pal_waddr = 7'h6C; pal_write = 1'b1; end 
+        32'hFFE103B4,32'hFEE103B4,32'hFDE103B4,32'hFCE103B4: begin pal_wdata = HWDATA; pal_waddr = 7'h6D; pal_write = 1'b1; end 
+        32'hFFE103B8,32'hFEE103B8,32'hFDE103B8,32'hFCE103B8: begin pal_wdata = HWDATA; pal_waddr = 7'h6E; pal_write = 1'b1; end 
+        32'hFFE103BC,32'hFEE103BC,32'hFDE103BC,32'hFCE103BC: begin pal_wdata = HWDATA; pal_waddr = 7'h6F; pal_write = 1'b1; end 
+        32'hFFE103C0,32'hFEE103C0,32'hFDE103C0,32'hFCE103C0: begin pal_wdata = HWDATA; pal_waddr = 7'h70; pal_write = 1'b1; end 
+        32'hFFE103C4,32'hFEE103C4,32'hFDE103C4,32'hFCE103C4: begin pal_wdata = HWDATA; pal_waddr = 7'h71; pal_write = 1'b1; end 
+        32'hFFE103C8,32'hFEE103C8,32'hFDE103C8,32'hFCE103C8: begin pal_wdata = HWDATA; pal_waddr = 7'h72; pal_write = 1'b1; end 
+        32'hFFE103CC,32'hFEE103CC,32'hFDE103CC,32'hFCE103CC: begin pal_wdata = HWDATA; pal_waddr = 7'h73; pal_write = 1'b1; end 
+        32'hFFE103D0,32'hFEE103D0,32'hFDE103D0,32'hFCE103D0: begin pal_wdata = HWDATA; pal_waddr = 7'h74; pal_write = 1'b1; end 
+        32'hFFE103D4,32'hFEE103D4,32'hFDE103D4,32'hFCE103D4: begin pal_wdata = HWDATA; pal_waddr = 7'h75; pal_write = 1'b1; end 
+        32'hFFE103D8,32'hFEE103D8,32'hFDE103D8,32'hFCE103D8: begin pal_wdata = HWDATA; pal_waddr = 7'h76; pal_write = 1'b1; end 
+        32'hFFE103DC,32'hFEE103DC,32'hFDE103DC,32'hFCE103DC: begin pal_wdata = HWDATA; pal_waddr = 7'h77; pal_write = 1'b1; end 
+        32'hFFE103E0,32'hFEE103E0,32'hFDE103E0,32'hFCE103E0: begin pal_wdata = HWDATA; pal_waddr = 7'h78; pal_write = 1'b1; end 
+        32'hFFE103E4,32'hFEE103E4,32'hFDE103E4,32'hFCE103E4: begin pal_wdata = HWDATA; pal_waddr = 7'h79; pal_write = 1'b1; end 
+        32'hFFE103E8,32'hFEE103E8,32'hFDE103E8,32'hFCE103E8: begin pal_wdata = HWDATA; pal_waddr = 7'h7A; pal_write = 1'b1; end 
+        32'hFFE103EC,32'hFEE103EC,32'hFDE103EC,32'hFCE103EC: begin pal_wdata = HWDATA; pal_waddr = 7'h7B; pal_write = 1'b1; end 
+        32'hFFE103F0,32'hFEE103F0,32'hFDE103F0,32'hFCE103F0: begin pal_wdata = HWDATA; pal_waddr = 7'h7C; pal_write = 1'b1; end 
+        32'hFFE103F4,32'hFEE103F4,32'hFDE103F4,32'hFCE103F4: begin pal_wdata = HWDATA; pal_waddr = 7'h7D; pal_write = 1'b1; end 
+        32'hFFE103F8,32'hFEE103F8,32'hFDE103F8,32'hFCE103F8: begin pal_wdata = HWDATA; pal_waddr = 7'h7E; pal_write = 1'b1; end 
+        32'hFFE103FC,32'hFEE103FC,32'hFDE103FC,32'hFCE103FC: begin pal_wdata = HWDATA; pal_waddr = 7'h7F; pal_write = 1'b1; end 
+              
+        32'hFFE10800,32'hFEE10800,32'hFDE10800,32'hFCE10800: CRSR_IMG[0] = HWDATA;
+        32'hFFE10804,32'hFEE10804,32'hFDE10804,32'hFCE10804: CRSR_IMG[1] = HWDATA;
+        32'hFFE10808,32'hFEE10808,32'hFDE10808,32'hFCE10808: CRSR_IMG[2] = HWDATA;
+        32'hFFE1080C,32'hFEE1080C,32'hFDE1080C,32'hFCE1080C: CRSR_IMG[3] = HWDATA;
+        32'hFFE10810,32'hFEE10810,32'hFDE10810,32'hFCE10810: CRSR_IMG[4] = HWDATA;
+        32'hFFE10814,32'hFEE10814,32'hFDE10814,32'hFCE10814: CRSR_IMG[5] = HWDATA;
+        32'hFFE10818,32'hFEE10818,32'hFDE10818,32'hFCE10818: CRSR_IMG[6] = HWDATA;
+        32'hFFE1081C,32'hFEE1081C,32'hFDE1081C,32'hFCE1081C: CRSR_IMG[7] = HWDATA;
+        32'hFFE10820,32'hFEE10820,32'hFDE10820,32'hFCE10820: CRSR_IMG[8] = HWDATA;
+        32'hFFE10824,32'hFEE10824,32'hFDE10824,32'hFCE10824: CRSR_IMG[9] = HWDATA;
+        32'hFFE10828,32'hFEE10828,32'hFDE10828,32'hFCE10828: CRSR_IMG[10] = HWDATA;
+        32'hFFE1082C,32'hFEE1082C,32'hFDE1082C,32'hFCE1082C: CRSR_IMG[11] = HWDATA;
+        32'hFFE10830,32'hFEE10830,32'hFDE10830,32'hFCE10830: CRSR_IMG[12] = HWDATA;
+        32'hFFE10834,32'hFEE10834,32'hFDE10834,32'hFCE10834: CRSR_IMG[13] = HWDATA;
+        32'hFFE10838,32'hFEE10838,32'hFDE10838,32'hFCE10838: CRSR_IMG[14] = HWDATA;
+        32'hFFE1083C,32'hFEE1083C,32'hFDE1083C,32'hFCE1083C: CRSR_IMG[15] = HWDATA;
+        32'hFFE10840,32'hFEE10840,32'hFDE10840,32'hFCE10840: CRSR_IMG[16] = HWDATA;
+        32'hFFE10844,32'hFEE10844,32'hFDE10844,32'hFCE10844: CRSR_IMG[17] = HWDATA;
+        32'hFFE10848,32'hFEE10848,32'hFDE10848,32'hFCE10848: CRSR_IMG[18] = HWDATA;
+        32'hFFE1084C,32'hFEE1084C,32'hFDE1084C,32'hFCE1084C: CRSR_IMG[19] = HWDATA;
+        32'hFFE10850,32'hFEE10850,32'hFDE10850,32'hFCE10850: CRSR_IMG[20] = HWDATA;
+        32'hFFE10854,32'hFEE10854,32'hFDE10854,32'hFCE10854: CRSR_IMG[21] = HWDATA;
+        32'hFFE10858,32'hFEE10858,32'hFDE10858,32'hFCE10858: CRSR_IMG[22] = HWDATA;
+        32'hFFE1085C,32'hFEE1085C,32'hFDE1085C,32'hFCE1085C: CRSR_IMG[23] = HWDATA;
+        32'hFFE10860,32'hFEE10860,32'hFDE10860,32'hFCE10860: CRSR_IMG[24] = HWDATA;
+        32'hFFE10864,32'hFEE10864,32'hFDE10864,32'hFCE10864: CRSR_IMG[25] = HWDATA;
+        32'hFFE10868,32'hFEE10868,32'hFDE10868,32'hFCE10868: CRSR_IMG[26] = HWDATA;
+        32'hFFE1086C,32'hFEE1086C,32'hFDE1086C,32'hFCE1086C: CRSR_IMG[27] = HWDATA;
+        32'hFFE10870,32'hFEE10870,32'hFDE10870,32'hFCE10870: CRSR_IMG[28] = HWDATA;
+        32'hFFE10874,32'hFEE10874,32'hFDE10874,32'hFCE10874: CRSR_IMG[29] = HWDATA;
+        32'hFFE10878,32'hFEE10878,32'hFDE10878,32'hFCE10878: CRSR_IMG[30] = HWDATA;
+        32'hFFE1087C,32'hFEE1087C,32'hFDE1087C,32'hFCE1087C: CRSR_IMG[31] = HWDATA;
+        32'hFFE10880,32'hFEE10880,32'hFDE10880,32'hFCE10880: CRSR_IMG[32] = HWDATA;
+        32'hFFE10884,32'hFEE10884,32'hFDE10884,32'hFCE10884: CRSR_IMG[33] = HWDATA;
+        32'hFFE10888,32'hFEE10888,32'hFDE10888,32'hFCE10888: CRSR_IMG[34] = HWDATA;
+        32'hFFE1088C,32'hFEE1088C,32'hFDE1088C,32'hFCE1088C: CRSR_IMG[35] = HWDATA;
+        32'hFFE10890,32'hFEE10890,32'hFDE10890,32'hFCE10890: CRSR_IMG[36] = HWDATA;
+        32'hFFE10894,32'hFEE10894,32'hFDE10894,32'hFCE10894: CRSR_IMG[37] = HWDATA;
+        32'hFFE10898,32'hFEE10898,32'hFDE10898,32'hFCE10898: CRSR_IMG[38] = HWDATA;
+        32'hFFE1089C,32'hFEE1089C,32'hFDE1089C,32'hFCE1089C: CRSR_IMG[39] = HWDATA;
+        32'hFFE108A0,32'hFEE108A0,32'hFDE108A0,32'hFCE108A0: CRSR_IMG[40] = HWDATA;
+        32'hFFE108A4,32'hFEE108A4,32'hFDE108A4,32'hFCE108A4: CRSR_IMG[41] = HWDATA;
+        32'hFFE108A8,32'hFEE108A8,32'hFDE108A8,32'hFCE108A8: CRSR_IMG[42] = HWDATA;
+        32'hFFE108AC,32'hFEE108AC,32'hFDE108AC,32'hFCE108AC: CRSR_IMG[43] = HWDATA;
+        32'hFFE108B0,32'hFEE108B0,32'hFDE108B0,32'hFCE108B0: CRSR_IMG[44] = HWDATA;
+        32'hFFE108B4,32'hFEE108B4,32'hFDE108B4,32'hFCE108B4: CRSR_IMG[45] = HWDATA;
+        32'hFFE108B8,32'hFEE108B8,32'hFDE108B8,32'hFCE108B8: CRSR_IMG[46] = HWDATA;
+        32'hFFE108BC,32'hFEE108BC,32'hFDE108BC,32'hFCE108BC: CRSR_IMG[47] = HWDATA;
+        32'hFFE108C0,32'hFEE108C0,32'hFDE108C0,32'hFCE108C0: CRSR_IMG[48] = HWDATA;
+        32'hFFE108C4,32'hFEE108C4,32'hFDE108C4,32'hFCE108C4: CRSR_IMG[49] = HWDATA;
+        32'hFFE108C8,32'hFEE108C8,32'hFDE108C8,32'hFCE108C8: CRSR_IMG[50] = HWDATA;
+        32'hFFE108CC,32'hFEE108CC,32'hFDE108CC,32'hFCE108CC: CRSR_IMG[51] = HWDATA;
+        32'hFFE108D0,32'hFEE108D0,32'hFDE108D0,32'hFCE108D0: CRSR_IMG[52] = HWDATA;
+        32'hFFE108D4,32'hFEE108D4,32'hFDE108D4,32'hFCE108D4: CRSR_IMG[53] = HWDATA;
+        32'hFFE108D8,32'hFEE108D8,32'hFDE108D8,32'hFCE108D8: CRSR_IMG[54] = HWDATA;
+        32'hFFE108DC,32'hFEE108DC,32'hFDE108DC,32'hFCE108DC: CRSR_IMG[55] = HWDATA;
+        32'hFFE108E0,32'hFEE108E0,32'hFDE108E0,32'hFCE108E0: CRSR_IMG[56] = HWDATA;
+        32'hFFE108E4,32'hFEE108E4,32'hFDE108E4,32'hFCE108E4: CRSR_IMG[57] = HWDATA;
+        32'hFFE108E8,32'hFEE108E8,32'hFDE108E8,32'hFCE108E8: CRSR_IMG[58] = HWDATA;
+        32'hFFE108EC,32'hFEE108EC,32'hFDE108EC,32'hFCE108EC: CRSR_IMG[59] = HWDATA;
+        32'hFFE108F0,32'hFEE108F0,32'hFDE108F0,32'hFCE108F0: CRSR_IMG[60] = HWDATA;
+        32'hFFE108F4,32'hFEE108F4,32'hFDE108F4,32'hFCE108F4: CRSR_IMG[61] = HWDATA;
+        32'hFFE108F8,32'hFEE108F8,32'hFDE108F8,32'hFCE108F8: CRSR_IMG[62] = HWDATA;
+        32'hFFE108FC,32'hFEE108FC,32'hFDE108FC,32'hFCE108FC: CRSR_IMG[63] = HWDATA;
+        32'hFFE10900,32'hFEE10900,32'hFDE10900,32'hFCE10900: CRSR_IMG[64] = HWDATA;
+        32'hFFE10904,32'hFEE10904,32'hFDE10904,32'hFCE10904: CRSR_IMG[65] = HWDATA;
+        32'hFFE10908,32'hFEE10908,32'hFDE10908,32'hFCE10908: CRSR_IMG[66] = HWDATA;
+        32'hFFE1090C,32'hFEE1090C,32'hFDE1090C,32'hFCE1090C: CRSR_IMG[67] = HWDATA;
+        32'hFFE10910,32'hFEE10910,32'hFDE10910,32'hFCE10910: CRSR_IMG[68] = HWDATA;
+        32'hFFE10914,32'hFEE10914,32'hFDE10914,32'hFCE10914: CRSR_IMG[69] = HWDATA;
+        32'hFFE10918,32'hFEE10918,32'hFDE10918,32'hFCE10918: CRSR_IMG[70] = HWDATA;
+        32'hFFE1091C,32'hFEE1091C,32'hFDE1091C,32'hFCE1091C: CRSR_IMG[71] = HWDATA;
+        32'hFFE10920,32'hFEE10920,32'hFDE10920,32'hFCE10920: CRSR_IMG[72] = HWDATA;
+        32'hFFE10924,32'hFEE10924,32'hFDE10924,32'hFCE10924: CRSR_IMG[73] = HWDATA;
+        32'hFFE10928,32'hFEE10928,32'hFDE10928,32'hFCE10928: CRSR_IMG[74] = HWDATA;
+        32'hFFE1092C,32'hFEE1092C,32'hFDE1092C,32'hFCE1092C: CRSR_IMG[75] = HWDATA;
+        32'hFFE10930,32'hFEE10930,32'hFDE10930,32'hFCE10930: CRSR_IMG[76] = HWDATA;
+        32'hFFE10934,32'hFEE10934,32'hFDE10934,32'hFCE10934: CRSR_IMG[77] = HWDATA;
+        32'hFFE10938,32'hFEE10938,32'hFDE10938,32'hFCE10938: CRSR_IMG[78] = HWDATA;
+        32'hFFE1093C,32'hFEE1093C,32'hFDE1093C,32'hFCE1093C: CRSR_IMG[79] = HWDATA;
+        32'hFFE10940,32'hFEE10940,32'hFDE10940,32'hFCE10940: CRSR_IMG[80] = HWDATA;
+        32'hFFE10944,32'hFEE10944,32'hFDE10944,32'hFCE10944: CRSR_IMG[81] = HWDATA;
+        32'hFFE10948,32'hFEE10948,32'hFDE10948,32'hFCE10948: CRSR_IMG[82] = HWDATA;
+        32'hFFE1094C,32'hFEE1094C,32'hFDE1094C,32'hFCE1094C: CRSR_IMG[83] = HWDATA;
+        32'hFFE10950,32'hFEE10950,32'hFDE10950,32'hFCE10950: CRSR_IMG[84] = HWDATA;
+        32'hFFE10954,32'hFEE10954,32'hFDE10954,32'hFCE10954: CRSR_IMG[85] = HWDATA;
+        32'hFFE10958,32'hFEE10958,32'hFDE10958,32'hFCE10958: CRSR_IMG[86] = HWDATA;
+        32'hFFE1095C,32'hFEE1095C,32'hFDE1095C,32'hFCE1095C: CRSR_IMG[87] = HWDATA;
+        32'hFFE10960,32'hFEE10960,32'hFDE10960,32'hFCE10960: CRSR_IMG[88] = HWDATA;
+        32'hFFE10964,32'hFEE10964,32'hFDE10964,32'hFCE10964: CRSR_IMG[89] = HWDATA;
+        32'hFFE10968,32'hFEE10968,32'hFDE10968,32'hFCE10968: CRSR_IMG[90] = HWDATA;
+        32'hFFE1096C,32'hFEE1096C,32'hFDE1096C,32'hFCE1096C: CRSR_IMG[91] = HWDATA;
+        32'hFFE10970,32'hFEE10970,32'hFDE10970,32'hFCE10970: CRSR_IMG[92] = HWDATA;
+        32'hFFE10974,32'hFEE10974,32'hFDE10974,32'hFCE10974: CRSR_IMG[93] = HWDATA;
+        32'hFFE10978,32'hFEE10978,32'hFDE10978,32'hFCE10978: CRSR_IMG[94] = HWDATA;
+        32'hFFE1097C,32'hFEE1097C,32'hFDE1097C,32'hFCE1097C: CRSR_IMG[95] = HWDATA;
+        32'hFFE10980,32'hFEE10980,32'hFDE10980,32'hFCE10980: CRSR_IMG[96] = HWDATA;
+        32'hFFE10984,32'hFEE10984,32'hFDE10984,32'hFCE10984: CRSR_IMG[97] = HWDATA;
+        32'hFFE10988,32'hFEE10988,32'hFDE10988,32'hFCE10988: CRSR_IMG[98] = HWDATA;
+        32'hFFE1098C,32'hFEE1098C,32'hFDE1098C,32'hFCE1098C: CRSR_IMG[99] = HWDATA;
+        32'hFFE10990,32'hFEE10990,32'hFDE10990,32'hFCE10990: CRSR_IMG[100] = HWDATA;
+        32'hFFE10994,32'hFEE10994,32'hFDE10994,32'hFCE10994: CRSR_IMG[101] = HWDATA;
+        32'hFFE10998,32'hFEE10998,32'hFDE10998,32'hFCE10998: CRSR_IMG[102] = HWDATA;
+        32'hFFE1099C,32'hFEE1099C,32'hFDE1099C,32'hFCE1099C: CRSR_IMG[103] = HWDATA;
+        32'hFFE109A0,32'hFEE109A0,32'hFDE109A0,32'hFCE109A0: CRSR_IMG[104] = HWDATA;
+        32'hFFE109A4,32'hFEE109A4,32'hFDE109A4,32'hFCE109A4: CRSR_IMG[105] = HWDATA;
+        32'hFFE109A8,32'hFEE109A8,32'hFDE109A8,32'hFCE109A8: CRSR_IMG[106] = HWDATA;
+        32'hFFE109AC,32'hFEE109AC,32'hFDE109AC,32'hFCE109AC: CRSR_IMG[107] = HWDATA;
+        32'hFFE109B0,32'hFEE109B0,32'hFDE109B0,32'hFCE109B0: CRSR_IMG[108] = HWDATA;
+        32'hFFE109B4,32'hFEE109B4,32'hFDE109B4,32'hFCE109B4: CRSR_IMG[109] = HWDATA;
+        32'hFFE109B8,32'hFEE109B8,32'hFDE109B8,32'hFCE109B8: CRSR_IMG[110] = HWDATA;
+        32'hFFE109BC,32'hFEE109BC,32'hFDE109BC,32'hFCE109BC: CRSR_IMG[111] = HWDATA;
+        32'hFFE109C0,32'hFEE109C0,32'hFDE109C0,32'hFCE109C0: CRSR_IMG[112] = HWDATA;
+        32'hFFE109C4,32'hFEE109C4,32'hFDE109C4,32'hFCE109C4: CRSR_IMG[113] = HWDATA;
+        32'hFFE109C8,32'hFEE109C8,32'hFDE109C8,32'hFCE109C8: CRSR_IMG[114] = HWDATA;
+        32'hFFE109CC,32'hFEE109CC,32'hFDE109CC,32'hFCE109CC: CRSR_IMG[115] = HWDATA;
+        32'hFFE109D0,32'hFEE109D0,32'hFDE109D0,32'hFCE109D0: CRSR_IMG[116] = HWDATA;
+        32'hFFE109D4,32'hFEE109D4,32'hFDE109D4,32'hFCE109D4: CRSR_IMG[117] = HWDATA;
+        32'hFFE109D8,32'hFEE109D8,32'hFDE109D8,32'hFCE109D8: CRSR_IMG[118] = HWDATA;
+        32'hFFE109DC,32'hFEE109DC,32'hFDE109DC,32'hFCE109DC: CRSR_IMG[119] = HWDATA;
+        32'hFFE109E0,32'hFEE109E0,32'hFDE109E0,32'hFCE109E0: CRSR_IMG[120] = HWDATA;
+        32'hFFE109E4,32'hFEE109E4,32'hFDE109E4,32'hFCE109E4: CRSR_IMG[121] = HWDATA;
+        32'hFFE109E8,32'hFEE109E8,32'hFDE109E8,32'hFCE109E8: CRSR_IMG[122] = HWDATA;
+        32'hFFE109EC,32'hFEE109EC,32'hFDE109EC,32'hFCE109EC: CRSR_IMG[123] = HWDATA;
+        32'hFFE109F0,32'hFEE109F0,32'hFDE109F0,32'hFCE109F0: CRSR_IMG[124] = HWDATA;
+        32'hFFE109F4,32'hFEE109F4,32'hFDE109F4,32'hFCE109F4: CRSR_IMG[125] = HWDATA;
+        32'hFFE109F8,32'hFEE109F8,32'hFDE109F8,32'hFCE109F8: CRSR_IMG[126] = HWDATA;
+        32'hFFE109FC,32'hFEE109FC,32'hFDE109FC,32'hFCE109FC: CRSR_IMG[127] = HWDATA;
+        32'hFFE10A00,32'hFEE10A00,32'hFDE10A00,32'hFCE10A00: CRSR_IMG[128] = HWDATA;
+        32'hFFE10A04,32'hFEE10A04,32'hFDE10A04,32'hFCE10A04: CRSR_IMG[129] = HWDATA;
+        32'hFFE10A08,32'hFEE10A08,32'hFDE10A08,32'hFCE10A08: CRSR_IMG[130] = HWDATA;
+        32'hFFE10A0C,32'hFEE10A0C,32'hFDE10A0C,32'hFCE10A0C: CRSR_IMG[131] = HWDATA;
+        32'hFFE10A10,32'hFEE10A10,32'hFDE10A10,32'hFCE10A10: CRSR_IMG[132] = HWDATA;
+        32'hFFE10A14,32'hFEE10A14,32'hFDE10A14,32'hFCE10A14: CRSR_IMG[133] = HWDATA;
+        32'hFFE10A18,32'hFEE10A18,32'hFDE10A18,32'hFCE10A18: CRSR_IMG[134] = HWDATA;
+        32'hFFE10A1C,32'hFEE10A1C,32'hFDE10A1C,32'hFCE10A1C: CRSR_IMG[135] = HWDATA;
+        32'hFFE10A20,32'hFEE10A20,32'hFDE10A20,32'hFCE10A20: CRSR_IMG[136] = HWDATA;
+        32'hFFE10A24,32'hFEE10A24,32'hFDE10A24,32'hFCE10A24: CRSR_IMG[137] = HWDATA;
+        32'hFFE10A28,32'hFEE10A28,32'hFDE10A28,32'hFCE10A28: CRSR_IMG[138] = HWDATA;
+        32'hFFE10A2C,32'hFEE10A2C,32'hFDE10A2C,32'hFCE10A2C: CRSR_IMG[139] = HWDATA;
+        32'hFFE10A30,32'hFEE10A30,32'hFDE10A30,32'hFCE10A30: CRSR_IMG[140] = HWDATA;
+        32'hFFE10A34,32'hFEE10A34,32'hFDE10A34,32'hFCE10A34: CRSR_IMG[141] = HWDATA;
+        32'hFFE10A38,32'hFEE10A38,32'hFDE10A38,32'hFCE10A38: CRSR_IMG[142] = HWDATA;
+        32'hFFE10A3C,32'hFEE10A3C,32'hFDE10A3C,32'hFCE10A3C: CRSR_IMG[143] = HWDATA;
+        32'hFFE10A40,32'hFEE10A40,32'hFDE10A40,32'hFCE10A40: CRSR_IMG[144] = HWDATA;
+        32'hFFE10A44,32'hFEE10A44,32'hFDE10A44,32'hFCE10A44: CRSR_IMG[145] = HWDATA;
+        32'hFFE10A48,32'hFEE10A48,32'hFDE10A48,32'hFCE10A48: CRSR_IMG[146] = HWDATA;
+        32'hFFE10A4C,32'hFEE10A4C,32'hFDE10A4C,32'hFCE10A4C: CRSR_IMG[147] = HWDATA;
+        32'hFFE10A50,32'hFEE10A50,32'hFDE10A50,32'hFCE10A50: CRSR_IMG[148] = HWDATA;
+        32'hFFE10A54,32'hFEE10A54,32'hFDE10A54,32'hFCE10A54: CRSR_IMG[149] = HWDATA;
+        32'hFFE10A58,32'hFEE10A58,32'hFDE10A58,32'hFCE10A58: CRSR_IMG[150] = HWDATA;
+        32'hFFE10A5C,32'hFEE10A5C,32'hFDE10A5C,32'hFCE10A5C: CRSR_IMG[151] = HWDATA;
+        32'hFFE10A60,32'hFEE10A60,32'hFDE10A60,32'hFCE10A60: CRSR_IMG[152] = HWDATA;
+        32'hFFE10A64,32'hFEE10A64,32'hFDE10A64,32'hFCE10A64: CRSR_IMG[153] = HWDATA;
+        32'hFFE10A68,32'hFEE10A68,32'hFDE10A68,32'hFCE10A68: CRSR_IMG[154] = HWDATA;
+        32'hFFE10A6C,32'hFEE10A6C,32'hFDE10A6C,32'hFCE10A6C: CRSR_IMG[155] = HWDATA;
+        32'hFFE10A70,32'hFEE10A70,32'hFDE10A70,32'hFCE10A70: CRSR_IMG[156] = HWDATA;
+        32'hFFE10A74,32'hFEE10A74,32'hFDE10A74,32'hFCE10A74: CRSR_IMG[157] = HWDATA;
+        32'hFFE10A78,32'hFEE10A78,32'hFDE10A78,32'hFCE10A78: CRSR_IMG[158] = HWDATA;
+        32'hFFE10A7C,32'hFEE10A7C,32'hFDE10A7C,32'hFCE10A7C: CRSR_IMG[159] = HWDATA;
+        32'hFFE10A80,32'hFEE10A80,32'hFDE10A80,32'hFCE10A80: CRSR_IMG[160] = HWDATA;
+        32'hFFE10A84,32'hFEE10A84,32'hFDE10A84,32'hFCE10A84: CRSR_IMG[161] = HWDATA;
+        32'hFFE10A88,32'hFEE10A88,32'hFDE10A88,32'hFCE10A88: CRSR_IMG[162] = HWDATA;
+        32'hFFE10A8C,32'hFEE10A8C,32'hFDE10A8C,32'hFCE10A8C: CRSR_IMG[163] = HWDATA;
+        32'hFFE10A90,32'hFEE10A90,32'hFDE10A90,32'hFCE10A90: CRSR_IMG[164] = HWDATA;
+        32'hFFE10A94,32'hFEE10A94,32'hFDE10A94,32'hFCE10A94: CRSR_IMG[165] = HWDATA;
+        32'hFFE10A98,32'hFEE10A98,32'hFDE10A98,32'hFCE10A98: CRSR_IMG[166] = HWDATA;
+        32'hFFE10A9C,32'hFEE10A9C,32'hFDE10A9C,32'hFCE10A9C: CRSR_IMG[167] = HWDATA;
+        32'hFFE10AA0,32'hFEE10AA0,32'hFDE10AA0,32'hFCE10AA0: CRSR_IMG[168] = HWDATA;
+        32'hFFE10AA4,32'hFEE10AA4,32'hFDE10AA4,32'hFCE10AA4: CRSR_IMG[169] = HWDATA;
+        32'hFFE10AA8,32'hFEE10AA8,32'hFDE10AA8,32'hFCE10AA8: CRSR_IMG[170] = HWDATA;
+        32'hFFE10AAC,32'hFEE10AAC,32'hFDE10AAC,32'hFCE10AAC: CRSR_IMG[171] = HWDATA;
+        32'hFFE10AB0,32'hFEE10AB0,32'hFDE10AB0,32'hFCE10AB0: CRSR_IMG[172] = HWDATA;
+        32'hFFE10AB4,32'hFEE10AB4,32'hFDE10AB4,32'hFCE10AB4: CRSR_IMG[173] = HWDATA;
+        32'hFFE10AB8,32'hFEE10AB8,32'hFDE10AB8,32'hFCE10AB8: CRSR_IMG[174] = HWDATA;
+        32'hFFE10ABC,32'hFEE10ABC,32'hFDE10ABC,32'hFCE10ABC: CRSR_IMG[175] = HWDATA;
+        32'hFFE10AC0,32'hFEE10AC0,32'hFDE10AC0,32'hFCE10AC0: CRSR_IMG[176] = HWDATA;
+        32'hFFE10AC4,32'hFEE10AC4,32'hFDE10AC4,32'hFCE10AC4: CRSR_IMG[177] = HWDATA;
+        32'hFFE10AC8,32'hFEE10AC8,32'hFDE10AC8,32'hFCE10AC8: CRSR_IMG[178] = HWDATA;
+        32'hFFE10ACC,32'hFEE10ACC,32'hFDE10ACC,32'hFCE10ACC: CRSR_IMG[179] = HWDATA;
+        32'hFFE10AD0,32'hFEE10AD0,32'hFDE10AD0,32'hFCE10AD0: CRSR_IMG[180] = HWDATA;
+        32'hFFE10AD4,32'hFEE10AD4,32'hFDE10AD4,32'hFCE10AD4: CRSR_IMG[181] = HWDATA;
+        32'hFFE10AD8,32'hFEE10AD8,32'hFDE10AD8,32'hFCE10AD8: CRSR_IMG[182] = HWDATA;
+        32'hFFE10ADC,32'hFEE10ADC,32'hFDE10ADC,32'hFCE10ADC: CRSR_IMG[183] = HWDATA;
+        32'hFFE10AE0,32'hFEE10AE0,32'hFDE10AE0,32'hFCE10AE0: CRSR_IMG[184] = HWDATA;
+        32'hFFE10AE4,32'hFEE10AE4,32'hFDE10AE4,32'hFCE10AE4: CRSR_IMG[185] = HWDATA;
+        32'hFFE10AE8,32'hFEE10AE8,32'hFDE10AE8,32'hFCE10AE8: CRSR_IMG[186] = HWDATA;
+        32'hFFE10AEC,32'hFEE10AEC,32'hFDE10AEC,32'hFCE10AEC: CRSR_IMG[187] = HWDATA;
+        32'hFFE10AF0,32'hFEE10AF0,32'hFDE10AF0,32'hFCE10AF0: CRSR_IMG[188] = HWDATA;
+        32'hFFE10AF4,32'hFEE10AF4,32'hFDE10AF4,32'hFCE10AF4: CRSR_IMG[189] = HWDATA;
+        32'hFFE10AF8,32'hFEE10AF8,32'hFDE10AF8,32'hFCE10AF8: CRSR_IMG[190] = HWDATA;
+        32'hFFE10AFC,32'hFEE10AFC,32'hFDE10AFC,32'hFCE10AFC: CRSR_IMG[191] = HWDATA;
+        32'hFFE10B00,32'hFEE10B00,32'hFDE10B00,32'hFCE10B00: CRSR_IMG[192] = HWDATA;
+        32'hFFE10B04,32'hFEE10B04,32'hFDE10B04,32'hFCE10B04: CRSR_IMG[193] = HWDATA;
+        32'hFFE10B08,32'hFEE10B08,32'hFDE10B08,32'hFCE10B08: CRSR_IMG[194] = HWDATA;
+        32'hFFE10B0C,32'hFEE10B0C,32'hFDE10B0C,32'hFCE10B0C: CRSR_IMG[195] = HWDATA;
+        32'hFFE10B10,32'hFEE10B10,32'hFDE10B10,32'hFCE10B10: CRSR_IMG[196] = HWDATA;
+        32'hFFE10B14,32'hFEE10B14,32'hFDE10B14,32'hFCE10B14: CRSR_IMG[197] = HWDATA;
+        32'hFFE10B18,32'hFEE10B18,32'hFDE10B18,32'hFCE10B18: CRSR_IMG[198] = HWDATA;
+        32'hFFE10B1C,32'hFEE10B1C,32'hFDE10B1C,32'hFCE10B1C: CRSR_IMG[199] = HWDATA;
+        32'hFFE10B20,32'hFEE10B20,32'hFDE10B20,32'hFCE10B20: CRSR_IMG[200] = HWDATA;
+        32'hFFE10B24,32'hFEE10B24,32'hFDE10B24,32'hFCE10B24: CRSR_IMG[201] = HWDATA;
+        32'hFFE10B28,32'hFEE10B28,32'hFDE10B28,32'hFCE10B28: CRSR_IMG[202] = HWDATA;
+        32'hFFE10B2C,32'hFEE10B2C,32'hFDE10B2C,32'hFCE10B2C: CRSR_IMG[203] = HWDATA;
+        32'hFFE10B30,32'hFEE10B30,32'hFDE10B30,32'hFCE10B30: CRSR_IMG[204] = HWDATA;
+        32'hFFE10B34,32'hFEE10B34,32'hFDE10B34,32'hFCE10B34: CRSR_IMG[205] = HWDATA;
+        32'hFFE10B38,32'hFEE10B38,32'hFDE10B38,32'hFCE10B38: CRSR_IMG[206] = HWDATA;
+        32'hFFE10B3C,32'hFEE10B3C,32'hFDE10B3C,32'hFCE10B3C: CRSR_IMG[207] = HWDATA;
+        32'hFFE10B40,32'hFEE10B40,32'hFDE10B40,32'hFCE10B40: CRSR_IMG[208] = HWDATA;
+        32'hFFE10B44,32'hFEE10B44,32'hFDE10B44,32'hFCE10B44: CRSR_IMG[209] = HWDATA;
+        32'hFFE10B48,32'hFEE10B48,32'hFDE10B48,32'hFCE10B48: CRSR_IMG[210] = HWDATA;
+        32'hFFE10B4C,32'hFEE10B4C,32'hFDE10B4C,32'hFCE10B4C: CRSR_IMG[211] = HWDATA;
+        32'hFFE10B50,32'hFEE10B50,32'hFDE10B50,32'hFCE10B50: CRSR_IMG[212] = HWDATA;
+        32'hFFE10B54,32'hFEE10B54,32'hFDE10B54,32'hFCE10B54: CRSR_IMG[213] = HWDATA;
+        32'hFFE10B58,32'hFEE10B58,32'hFDE10B58,32'hFCE10B58: CRSR_IMG[214] = HWDATA;
+        32'hFFE10B5C,32'hFEE10B5C,32'hFDE10B5C,32'hFCE10B5C: CRSR_IMG[215] = HWDATA;
+        32'hFFE10B60,32'hFEE10B60,32'hFDE10B60,32'hFCE10B60: CRSR_IMG[216] = HWDATA;
+        32'hFFE10B64,32'hFEE10B64,32'hFDE10B64,32'hFCE10B64: CRSR_IMG[217] = HWDATA;
+        32'hFFE10B68,32'hFEE10B68,32'hFDE10B68,32'hFCE10B68: CRSR_IMG[218] = HWDATA;
+        32'hFFE10B6C,32'hFEE10B6C,32'hFDE10B6C,32'hFCE10B6C: CRSR_IMG[219] = HWDATA;
+        32'hFFE10B70,32'hFEE10B70,32'hFDE10B70,32'hFCE10B70: CRSR_IMG[220] = HWDATA;
+        32'hFFE10B74,32'hFEE10B74,32'hFDE10B74,32'hFCE10B74: CRSR_IMG[221] = HWDATA;
+        32'hFFE10B78,32'hFEE10B78,32'hFDE10B78,32'hFCE10B78: CRSR_IMG[222] = HWDATA;
+        32'hFFE10B7C,32'hFEE10B7C,32'hFDE10B7C,32'hFCE10B7C: CRSR_IMG[223] = HWDATA;
+        32'hFFE10B80,32'hFEE10B80,32'hFDE10B80,32'hFCE10B80: CRSR_IMG[224] = HWDATA;
+        32'hFFE10B84,32'hFEE10B84,32'hFDE10B84,32'hFCE10B84: CRSR_IMG[225] = HWDATA;
+        32'hFFE10B88,32'hFEE10B88,32'hFDE10B88,32'hFCE10B88: CRSR_IMG[226] = HWDATA;
+        32'hFFE10B8C,32'hFEE10B8C,32'hFDE10B8C,32'hFCE10B8C: CRSR_IMG[227] = HWDATA;
+        32'hFFE10B90,32'hFEE10B90,32'hFDE10B90,32'hFCE10B90: CRSR_IMG[228] = HWDATA;
+        32'hFFE10B94,32'hFEE10B94,32'hFDE10B94,32'hFCE10B94: CRSR_IMG[229] = HWDATA;
+        32'hFFE10B98,32'hFEE10B98,32'hFDE10B98,32'hFCE10B98: CRSR_IMG[230] = HWDATA;
+        32'hFFE10B9C,32'hFEE10B9C,32'hFDE10B9C,32'hFCE10B9C: CRSR_IMG[231] = HWDATA;
+        32'hFFE10BA0,32'hFEE10BA0,32'hFDE10BA0,32'hFCE10BA0: CRSR_IMG[232] = HWDATA;
+        32'hFFE10BA4,32'hFEE10BA4,32'hFDE10BA4,32'hFCE10BA4: CRSR_IMG[233] = HWDATA;
+        32'hFFE10BA8,32'hFEE10BA8,32'hFDE10BA8,32'hFCE10BA8: CRSR_IMG[234] = HWDATA;
+        32'hFFE10BAC,32'hFEE10BAC,32'hFDE10BAC,32'hFCE10BAC: CRSR_IMG[235] = HWDATA;
+        32'hFFE10BB0,32'hFEE10BB0,32'hFDE10BB0,32'hFCE10BB0: CRSR_IMG[236] = HWDATA;
+        32'hFFE10BB4,32'hFEE10BB4,32'hFDE10BB4,32'hFCE10BB4: CRSR_IMG[237] = HWDATA;
+        32'hFFE10BB8,32'hFEE10BB8,32'hFDE10BB8,32'hFCE10BB8: CRSR_IMG[238] = HWDATA;
+        32'hFFE10BBC,32'hFEE10BBC,32'hFDE10BBC,32'hFCE10BBC: CRSR_IMG[239] = HWDATA;
+        32'hFFE10BC0,32'hFEE10BC0,32'hFDE10BC0,32'hFCE10BC0: CRSR_IMG[240] = HWDATA;
+        32'hFFE10BC4,32'hFEE10BC4,32'hFDE10BC4,32'hFCE10BC4: CRSR_IMG[241] = HWDATA;
+        32'hFFE10BC8,32'hFEE10BC8,32'hFDE10BC8,32'hFCE10BC8: CRSR_IMG[242] = HWDATA;
+        32'hFFE10BCC,32'hFEE10BCC,32'hFDE10BCC,32'hFCE10BCC: CRSR_IMG[243] = HWDATA;
+        32'hFFE10BD0,32'hFEE10BD0,32'hFDE10BD0,32'hFCE10BD0: CRSR_IMG[244] = HWDATA;
+        32'hFFE10BD4,32'hFEE10BD4,32'hFDE10BD4,32'hFCE10BD4: CRSR_IMG[245] = HWDATA;
+        32'hFFE10BD8,32'hFEE10BD8,32'hFDE10BD8,32'hFCE10BD8: CRSR_IMG[246] = HWDATA;
+        32'hFFE10BDC,32'hFEE10BDC,32'hFDE10BDC,32'hFCE10BDC: CRSR_IMG[247] = HWDATA;
+        32'hFFE10BE0,32'hFEE10BE0,32'hFDE10BE0,32'hFCE10BE0: CRSR_IMG[248] = HWDATA;
+        32'hFFE10BE4,32'hFEE10BE4,32'hFDE10BE4,32'hFCE10BE4: CRSR_IMG[249] = HWDATA;
+        32'hFFE10BE8,32'hFEE10BE8,32'hFDE10BE8,32'hFCE10BE8: CRSR_IMG[250] = HWDATA;
+        32'hFFE10BEC,32'hFEE10BEC,32'hFDE10BEC,32'hFCE10BEC: CRSR_IMG[251] = HWDATA;
+        32'hFFE10BF0,32'hFEE10BF0,32'hFDE10BF0,32'hFCE10BF0: CRSR_IMG[252] = HWDATA;
+        32'hFFE10BF4,32'hFEE10BF4,32'hFDE10BF4,32'hFCE10BF4: CRSR_IMG[253] = HWDATA;
+        32'hFFE10BF8,32'hFEE10BF8,32'hFDE10BF8,32'hFCE10BF8: CRSR_IMG[254] = HWDATA;
+        32'hFFE10BFC,32'hFEE10BFC,32'hFDE10BFC,32'hFCE10BFC: CRSR_IMG[255] = HWDATA;
+                    
+                   
+        32'hFFE10C00,32'hFEE10C00,32'hFDE10C00,32'hFCE10C00: CRSR_CTRL= HWDATA ; 
+        32'hFFE10C04,32'hFEE10C04,32'hFDE10C04,32'hFCE10C04: CRSR_CFG= HWDATA ; 
+        32'hFFE10C08,32'hFEE10C08,32'hFDE10C08,32'hFCE10C08: CRSR_PAL0 = HWDATA;
+        32'hFFE10C0C,32'hFEE10C0C,32'hFDE10C0C,32'hFCE10C0C: CRSR_PAL1 = HWDATA;
+        32'hFFE10C10,32'hFEE10C10,32'hFDE10C10,32'hFCE10C10: CRSR_XY = HWDATA;
+        32'hFFE10C14,32'hFEE10C14,32'hFDE10C14,32'hFCE10C14: CRSR_CLIP = HWDATA;
+        32'hFFE10C20,32'hFEE10C20,32'hFDE10C20,32'hFCE10C20: CRSR_INTMSK = HWDATA;
+        32'hFFE10C24,32'hFEE10C24,32'hFDE10C24,32'hFCE10C24: CRSR_INTCLR = HWDATA;
+        32'hFFE10C28,32'hFEE10C28,32'hFDE10C28,32'hFCE10C28: CRSR_INTRAW = HWDATA;
+        32'hFFE10C2C,32'hFEE10C2C,32'hFDE10C2C,32'hFCE10C2C: CRSR_INTSTAT = HWDATA;
+      endcase
+//    end
+  end
+
+endmodule 

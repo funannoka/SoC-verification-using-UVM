@@ -1,0 +1,61 @@
+#!/usr/bin/csh
+
+source /apps/set_license
+
+rm -rf simres0.txt
+rm -rf simres1.txt
+rm -rf simres2.txt
+rm -rf simres3.txt
+rm -rf simres4.txt
+rm -rf simres5.txt
+rm -rf simres6.txt
+rm -rf simres7.txt
+rm -rf simres8.txt
+rm -rf simres9.txt
+rm -rf simres10.txt
+rm -rf simres11.txt
+rm -rf simres12.txt
+rm -rf simres13.txt
+rm -rf simres14.txt
+rm -rf simres15.txt
+
+setenv VCS_HOME /apps/synopsys/VCSMX
+source ${VCS_HOME}/bin/environ.csh
+setenv UVM_HOME /home/morris/uvm-1.2
+echo ${UVM_HOME}
+vcs -sverilog -timescale=1ns/1ns +acc +vpi +define+UVM_OBJECT_MUST_HAVE_CONSTRUCTOR +incdir+${UVM_HOME}/src ${UVM_HOME}/src/uvm.sv ${UVM_HOME}/src/dpi/uvm_dpi.cc -CFLAGS -DVCS $argv
+if ($status != 0) exit $status
+./simv +FileTest=t0.txt | tee -a simres0.txt
+./simv +FileTest=t1.txt | tee -a simres1.txt
+./simv +FileTest=t2.txt | tee -a simres2.txt
+./simv +FileTest=t3.txt | tee -a simres3.txt
+./simv +FileTest=t4.txt | tee -a simres4.txt
+./simv +FileTest=t5.txt | tee -a simres5.txt
+./simv +FileTest=t6.txt | tee -a simres6.txt
+./simv +FileTest=t7.txt | tee -a simres7.txt
+./simv +FileTest=t8.txt | tee -a simres8.txt
+./simv +FileTest=t9.txt | tee -a simres9.txt
+./simv +FileTest=t10.txt | tee -a simres10.txt
+./simv +FileTest=t11.txt | tee -a simres11.txt
+./simv +FileTest=t12.txt | tee -a simres12.txt
+./simv +FileTest=t13.txt | tee -a simres13.txt
+./simv +FileTest=t14.txt | tee -a simres14.txt
+./simv +FileTest=t15.txt | tee -a simres15.txt
+
+grep -i error simres0.txt
+grep -i error simres1.txt
+grep -i error simres2.txt
+grep -i error simres3.txt
+grep -i error simres4.txt
+grep -i error simres5.txt
+grep -i error simres6.txt
+grep -i error simres7.txt
+grep -i error simres8.txt
+grep -i error simres9.txt
+grep -i error simres10.txt
+grep -i error simres11.txt
+grep -i error simres12.txt
+grep -i error simres13.txt
+grep -i error simres14.txt
+grep -i error simres15.txt
+
