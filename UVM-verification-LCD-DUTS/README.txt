@@ -18,5 +18,5 @@ EE279 Final Project Submission
 5. Use the same command to run lcd_main, lcd_1, lcd_2 and lcd_3 designs
 
 6. If you have any questions, you can contact me through email or phone
-	 Phone: (408)714-8022
-	 Email: ifynnoka@gmail.com
+	 Phone: *******************
+	 Email: *******************
